@@ -1,0 +1,17 @@
+node_modules/
+.claude/
+*.ps1
+*.py
+test_*.js
+patch_*.js
+final_*.js
+translateAddress.js
+audio-learning-notes/
+# scraper files contain API keys - do NOT commit
+capture_api.js
+scraper.js
+scraper_browser.js
+scraper_detail.js
+test_pagination.js
+data/ieee_api_capture.json
+data/page_screenshot.png

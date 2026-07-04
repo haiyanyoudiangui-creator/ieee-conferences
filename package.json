@@ -1,0 +1,19 @@
+{
+  "name": "ieee-conferences",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"ok\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "IEEE China Conference Search",
+  "dependencies": {
+    "playwright": "^1.61.1"
+  }
+}

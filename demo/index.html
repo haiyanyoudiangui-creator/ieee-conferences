@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEEE 中国会议查询系统</title>
+<style>
+/* ============ Reset & Base ============ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #fff;
+  --primary: #0066a1;
+  --primary-light: #e8f4fb;
+  --accent: #f90;
+  --text: #1a1a2e;
+  --text-secondary: #5a5a7a;
+  --border: #e2e8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,.1);
+  --radius: 10px;
+  --tag-blue: #e0f0ff;
+  --tag-green: #e6f7e6;
+  --tag-orange: #fff3e0;
+  --tag-purple: #f3e8ff;
+  --tier-s: #b8860b;
+  --tier-s-bg: #fff8e1;
+  --tier-a: #1a73e8;
+  --tier-a-bg: #e8f0fe;
+  --tier-b: #1b8a4a;
+  --tier-b-bg: #e6f4ea;
+  --tier-c: #777;
+  --tier-c-bg: #f1f1f1;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ============ Header ============ */
+.header {
+  background: linear-gradient(135deg, #002b4e 0%, #004d80 50%, #0066a1 100%);
+  color: #fff;
+  padding: 32px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+.header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.header p {
+  font-size: .85rem;
+  opacity: .75;
+  margin-top: 4px;
+}
+
+/* ============ Container ============ */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ============ Stats Bar ============ */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 16px 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stat-card .stat-label {
+  font-size: .75rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.stat-card.tier-s .stat-value { color: var(--tier-s); }
+.stat-card.tier-a .stat-value { color: var(--tier-a); }
+.stat-card.tier-b .stat-value { color: var(--tier-b); }
+.stat-card.tier-c .stat-value { color: var(--tier-c); }
+
+/* ============ Tier Legend ============ */
+.tier-legend {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: .8rem;
+  color: var(--text-secondary);
+}
+
+.tier-legend strong { color: var(--text); }
+
+.tier-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tier-dot {
+  width: 12px; height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.tier-dot.s { background: var(--tier-s); }
+.tier-dot.a { background: var(--tier-a); }
+.tier-dot.b { background: var(--tier-b); }
+.tier-dot.c { background: var(--tier-c); }
+
+.tier-legend-toggle {
+  margin-left: auto;
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: .75rem;
+  user-select: none;
+}
+.tier-legend-toggle:hover { text-decoration: underline; }
+
+/* ============ Controls ============ */
+.controls {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 180px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: .9rem;
+  outline: none;
+  transition: border-color .2s;
+  background: var(--bg);
+}
+
+.search-box input:focus {
+  border-color: var(--primary);
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: .9rem;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: .85rem;
+  outline: none;
+  background: var(--bg);
+  cursor: pointer;
+  min-width: 110px;
+  max-width: 180px;
+  color: var(--text);
+  transition: border-color .2s;
+}
+
+.filter-select:focus { border-color: var(--primary); }
+
+.result-info {
+  font-size: .8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.btn-reset {
+  padding: 10px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  cursor: pointer;
+  font-size: .85rem;
+  color: var(--text-secondary);
+  transition: all .2s;
+  white-space: nowrap;
+}
+
+.btn-reset:hover {
+  background: #fee;
+  border-color: #e88;
+  color: #c44;
+}
+
+/* ============ Conference Grid ============ */
+.conf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.conf-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  transition: box-shadow .2s, transform .2s;
+  cursor: pointer;
+  border-left: 4px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conf-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.conf-card.tier-S { border-left-color: var(--tier-s); background: linear-gradient(135deg, #fff 0%, #fffdf5 100%); }
+.conf-card.tier-A { border-left-color: var(--tier-a); background: linear-gradient(135deg, #fff 0%, #f8fbff 100%); }
+.conf-card.tier-B { border-left-color: var(--tier-b); }
+.conf-card.tier-C { border-left-color: var(--tier-c); }
+
+.conf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.conf-title {
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+  flex: 1;
+}
+
+.tier-badge {
+  flex-shrink: 0;
+  font-size: .7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+.tier-badge.S { background: var(--tier-s-bg); color: var(--tier-s); border: 1px solid var(--tier-s); }
+.tier-badge.A { background: var(--tier-a-bg); color: var(--tier-a); border: 1px solid var(--tier-a); }
+.tier-badge.B { background: var(--tier-b-bg); color: var(--tier-b); border: 1px solid var(--tier-b); }
+.tier-badge.C { background: var(--tier-c-bg); color: var(--tier-c); border: 1px solid #ccc; }
+
+.conf-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: .8rem;
+  color: var(--text-secondary);
+}
+
+.conf-sponsors {
+  font-size: .78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conf-address {
+  font-size: .78rem;
+  color: #555;
+  line-height: 1.5;
+  padding: 5px 10px;
+  background: #f5f7fa;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.conf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+}
+
+.tag {
+  font-size: .7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tag-format { background: var(--tag-blue); color: #0066a1; }
+.tag-city { background: var(--tag-green); color: #2e7d32; }
+.tag-field { background: var(--tag-purple); color: #6b21a8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+.tag-year { background: var(--tag-orange); color: #e65100; }
+.tag-sponsor { background: #fce4ec; color: #c62828; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+.tag-tier-reason { background: #f5f5f5; color: #666; font-style: italic; }
+
+/* ============ Modal ============ */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 1000;
+  justify-content: center; align-items: center;
+  padding: 20px;
+}
+.modal-overlay.show { display: flex; }
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px; width: 100%; max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  animation: modalIn .2s ease;
+}
+@keyframes modalIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.modal-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  position: sticky; top: 0; background: #fff; z-index: 1; border-radius: 12px 12px 0 0;
+}
+.modal-header h3 { font-size: 1rem; flex: 1; line-height: 1.5; }
+.modal-close {
+  background: none; border: none; font-size: 1.5rem; cursor: pointer;
+  color: #999; padding: 0 4px; line-height: 1;
+}
+.modal-close:hover { color: #333; }
+
+.modal-body { padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; }
+.modal-section { }
+.modal-section h4 { font-size: .82rem; color: var(--primary); margin-bottom: 6px; }
+.modal-section p, .modal-section div { font-size: .85rem; color: var(--text-secondary); line-height: 1.7; }
+.modal-kw { display: flex; flex-wrap: wrap; gap: 6px; }
+.modal-kw span { font-size: .72rem; padding: 3px 10px; border-radius: 12px; background: #f0f4ff; color: #4a6cf7; }
+
+/* ============ No Results ============ */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.no-results .icon { font-size: 3rem; margin-bottom: 12px; }
+
+/* ============ Footer ============ */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-secondary);
+  font-size: .75rem;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+/* ============ Tier Detail Panel ============ */
+.tier-detail {
+  display: none;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  font-size: .82rem;
+  line-height: 1.8;
+}
+
+.tier-detail.show { display: block; }
+
+.tier-detail h3 { margin-bottom: 10px; font-size: .95rem; }
+
+.tier-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tier-detail th, .tier-detail td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.tier-detail th {
+  background: var(--bg);
+  font-weight: 600;
+  font-size: .78rem;
+  color: var(--text-secondary);
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .stats-bar { grid-template-columns: repeat(3, 1fr); }
+  .conf-grid { grid-template-columns: 1fr; }
+  .controls { flex-direction: column; }
+  .filter-select { width: 100%; max-width: none; }
+  .header h1 { font-size: 1.3rem; }
+  .tier-legend { flex-direction: column; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <h1>📡 IEEE 中国会议查询系统</h1>
+    <p>数据来源: conferences.ieee.org · 含金量智能评级 · 共 381 场会议</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Stats -->
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-card"><div class="stat-value" id="statTotal">-</div><div class="stat-label">会议总数</div></div>
+    <div class="stat-card tier-s"><div class="stat-value" id="statS">-</div><div class="stat-label">🏆 S级 顶级</div></div>
+    <div class="stat-card tier-a"><div class="stat-value" id="statA">-</div><div class="stat-label">🥇 A级 高质量</div></div>
+    <div class="stat-card tier-b"><div class="stat-value" id="statB">-</div><div class="stat-label">🥈 B级 良好</div></div>
+    <div class="stat-card tier-c"><div class="stat-value" id="statC">-</div><div class="stat-label">🥉 C级 一般</div></div>
+    <div class="stat-card"><div class="stat-value" id="statCities">-</div><div class="stat-label">覆盖城市</div></div>
+  </div>
+
+  <!-- Tier Legend -->
+  <div class="tier-legend">
+    <strong>含金量评级标准：</strong>
+    <span class="tier-legend-item"><span class="tier-dot s"></span> S级 = IEEE旗舰学会 + 多届国际会议</span>
+    <span class="tier-legend-item"><span class="tier-dot a"></span> A级 = IEEE知名学会主办</span>
+    <span class="tier-legend-item"><span class="tier-dot b"></span> B级 = IEEE分会/知名大学</span>
+    <span class="tier-legend-item"><span class="tier-dot c"></span> C级 = 其他主办方</span>
+    <span class="tier-legend-toggle" onclick="toggleDetail()">📋 详细评级逻辑</span>
+  </div>
+
+  <!-- Tier Detail Panel -->
+  <div class="tier-detail" id="tierDetail">
+    <h3>📊 含金量评级详细逻辑</h3>
+    <table>
+      <tr><th>等级</th><th>标识</th><th>判断规则</th><th>示例</th></tr>
+      <tr>
+        <td><strong>S级</strong></td>
+        <td>🏆 顶级</td>
+        <td>① IEEE旗舰学会主办（Computer / Communications / Signal Processing / Robotics等）+ 举办≥5届<br>② 或 ≥3个IEEE学会联合主办</td>
+        <td>IEEE Computer Society 主办的第26届国际会议</td>
+      </tr>
+      <tr>
+        <td><strong>A级</strong></td>
+        <td>🥇 高质量</td>
+        <td>① IEEE知名学会主办 + ≥3届历史<br>② IEEE学会+顶尖大学合办<br>③ IEEE理事会主办 + ≥5届</td>
+        <td>IEEE Robotics and Automation Society + 清华合办</td>
+      </tr>
+      <tr>
+        <td><strong>B级</strong></td>
+        <td>🥈 良好</td>
+        <td>① IEEE区域分会/Chapter主办<br>② 知名大学（985/211）主办<br>③ IEEE相关机构（理事会/社区）</td>
+        <td>IEEE Beijing Section 主办 或 浙江大学主办</td>
+      </tr>
+      <tr>
+        <td><strong>C级</strong></td>
+        <td>🥉 一般</td>
+        <td>① 地方机构/小院校主办<br>② 非IEEE主要赞助方<br>③ 新会议（届数少）或商业机构主办</td>
+        <td>地方学院 / 商业协会主办的会议</td>
+      </tr>
+    </table>
+    <p style="margin-top:10px;color:var(--text-secondary);font-size:.78rem">
+      ⚠️ 本评级基于主办方资质和会议历史自动判定，仅供参考。评级不反映论文质量或录取率。建议结合 CCF推荐列表、录取率、IEEE Xplore 收录情况综合判断。
+    </p>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="搜索会议名称、主办方、领域...">
+    </div>
+    <select class="filter-select" id="filterTier">
+      <option value="">🏅 全部含金量</option>
+      <option value="S">🏆 S级 顶级</option>
+      <option value="A">🥇 A级 高质量</option>
+      <option value="B">🥈 B级 良好</option>
+      <option value="C">🥉 C级 一般</option>
+    </select>
+    <select class="filter-select" id="filterSponsor">
+      <option value="">🏛️ 全部主办方</option>
+    </select>
+    <select class="filter-select" id="filterCity">
+      <option value="">🏙️ 全部城市</option>
+    </select>
+    <select class="filter-select" id="filterYear">
+      <option value="">📅 全部年份</option>
+    </select>
+    <select class="filter-select" id="filterMonth">
+      <option value="">📆 全部月份</option>
+    </select>
+    <select class="filter-select" id="filterFormat">
+      <option value="">🎯 全部形式</option>
+    </select>
+    <span class="result-info" id="resultInfo">共 0 条</span>
+    <button class="btn-reset" onclick="resetFilters()">✕ 清除</button>
+  </div>
+
+  <!-- Conference Grid -->
+  <div class="conf-grid" id="confGrid"></div>
+
+  <!-- Load More -->
+  <div style="text-align:center;margin-bottom:24px" id="loadMoreWrap">
+    <button class="btn-reset" id="loadMoreBtn" onclick="loadMore()" style="padding:12px 32px;font-size:.9rem">
+      加载更多 ↓
+    </button>
+  </div>
+
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<footer class="footer">
+  IEEE Conference Search · 含金量评级基于主办方和历史届数自动判定 · Demo
+</footer>
+
+<script>
+// ============ City Name Mapping ============
+const CITY_CN = {
+  'Aksu':'阿克苏','Beijing':'北京','Changchun':'长春','Changchun, Jilin':'长春','Changsha':'长沙','Changzhou':'常州','Chengdu':'成都','Chongqing':'重庆','Dali':'大理','Dalian':'大连','Dongguan':'东莞','Foshan':'佛山','Fushun':'抚顺','Fuzhou':'福州','Guangzhou':'广州','Guilin':'桂林','Guiyang':'贵阳','Haikou':'海口','Hangzhou':'杭州','Harbin':'哈尔滨','HeFei,AnHui':'合肥','Hefei':'合肥','Hohhot':'呼和浩特','Hong Kong':'香港',"Huai'an":'淮安','Huizhou':'惠州','Huludao':'葫芦岛',"Ji'nan":'济南','Jiangmen':'江门','Jiangyin':'江阴','Jiaxing':'嘉兴','Jinan':'济南','Jinzhou':'锦州','Kunming':'昆明','Lanzhou':'兰州','Linfen':'临汾','Liuzhou':'柳州','Luoyang':'洛阳','Macau':'澳门','Mianyang':'绵阳','Nanchang':'南昌','Nanchong':'南充','Nanijing':'南京','Nanjing':'南京','Nanning':'南宁','Nanping, Fujian':'南平','Nantong':'南通','Ningbo':'宁波','Panzhihua':'攀枝花','Qingdao':'青岛','Qinhuangdao':'秦皇岛','Qujing':'曲靖','Rizhao':'日照','Sanya':'三亚','Shanghai':'上海','Shenyang':'沈阳','Shenzhen':'深圳','Shijiazhuang':'石家庄','Suqian':'宿迁','Suzhou':'苏州','Taicang':'太仓','Taiyuan':'太原','Tengchong':'腾冲','Tianjin':'天津','Tianshui':'天水','Tumxuk':'图木舒克','Urumqi':'乌鲁木齐','Weihai':'威海','Wenzhou':'温州','Wuhan':'武汉','Wuhu':'芜湖','Wuxi':'无锡',"Xi'an":'西安','Xiamen':'厦门','Xian City':'西安','Xining':'西宁','Xinjiang':'新疆','Xinxiang':'新乡','Yi Chang':'宜昌','Yibin':'宜宾','Yichang':'宜昌','Yin Chuan':'银川','Yinchuan':'银川','Zhengzhou':'郑州','Zhenjiang':'镇江','Zhuhai':'珠海','Zhuji City, Shaoxing':'绍兴诸暨',
+};
+function cityCN(name) { return CITY_CN[name] || name; }
+
+// ============ Address Translation (English → Chinese) ============
+const PROVINCE_CN = {
+  'Guangdong Province':'广东省','Guangdong':'广东','Zhejiang Province':'浙江省','Zhejiang':'浙江',
+  'Jiangsu Province':'江苏省','Jiangsu':'江苏','Shandong Province':'山东省','Shandong':'山东',
+  'Sichuan Province':'四川省','Sichuan':'四川','Hubei Province':'湖北省','Hubei':'湖北',
+  'Hunan Province':'湖南省','Hunan':'湖南','Fujian Province':'福建省','Fujian':'福建',
+  'Henan Province':'河南省','Henan':'河南','Liaoning Province':'辽宁省','Liaoning':'辽宁',
+  'Shaanxi Province':'陕西省','Shaanxi':'陕西','Shanxi Province':'山西省','Shanxi':'山西',
+  'Gansu Province':'甘肃省','Gansu':'甘肃','Yunnan Province':'云南省','Yunnan':'云南',
+  'Guizhou Province':'贵州省','Guizhou':'贵州','Hainan Province':'海南省','Hainan':'海南',
+  'Anhui Province':'安徽省','Anhui':'安徽','Jiangxi Province':'江西省','Jiangxi':'江西',
+  'Jilin Province':'吉林省','Jilin':'吉林','Heilongjiang Province':'黑龙江省','Heilongjiang':'黑龙江',
+  'Hebei Province':'河北省','Hebei':'河北','Guangxi Province':'广西','Guangxi':'广西',
+  'Xinjiang Province':'新疆','Xinjiang':'新疆','Inner Mongolia':'内蒙古',
+  'Tibet':'西藏','Qinghai':'青海','Ningxia':'宁夏',
+};
+
+const PINYIN_CN = {
+  // 大学名
+  'Jiaotong':'交通','Jiao Tong':'交通','Hangkong':'航空','Hangtian':'航天',
+  'Dianzi':'电子','Dianli':'电力','Youdian':'邮电','Gongye':'工业','Nongye':'农业',
+  'Shifan':'师范','Shifan Daxue':'师范大学','Yike':'医科','Zhongyi':'中医',
+  'Caijing':'财经','Zhengfa':'政法','Minzu':'民族','Haiyang':'海洋',
+  // 区/地名
+  'Nanshan':'南山','Futian':'福田','Baoan':'宝安','Longgang':'龙岗','Luohu':'罗湖',
+  'Pudong':'浦东','Xuhui':'徐汇','Jingan':'静安','Changning':'长宁','Yangpu':'杨浦',
+  'Huangpu':'黄埔','Minhang':'闵行','Jiading':'嘉定','Songjiang':'松江',
+  'Chaoyang':'朝阳','Haidian':'海淀','Fengtai':'丰台','Dongcheng':'东城','Xicheng':'西城',
+  'Tongzhou':'通州','Daxing':'大兴','Shunyi':'顺义','Changping':'昌平',
+  'Binhai':'滨海','Xiqing':'西青','Dongli':'东丽','Jinnan':'津南',
+  'Jiangning':'江宁','Qixia':'栖霞','Xuanwu':'玄武','Qinhuai':'秦淮','Pukou':'浦口',
+  'Xiaoshan':'萧山','Yuhang':'余杭','Binjiang':'滨江','Gongshu':'拱墅',
+  'Wuhou':'武侯','Jinjiang':'锦江','Qingyang':'青羊','Chenghua':'成华','Longquanyi':'龙泉驿',
+  'Yanta':'雁塔','Weiyang':'未央','Beilin':'碑林',
+  'Gaoxin':'高新','Jiangbei':'江北','Yubei':'渝北','Shapingba':'沙坪坝',
+  'Hunnan':'浑南','Shenhe':'沈河','Dadong':'大东',
+  'Licang':'李沧','Chengyang':'城阳','Laoshan':'崂山',
+  'Siming':'思明','Huli':'湖里','Jimei':'集美',
+  'Xiangzhou':'香洲','Doumen':'斗门','Jinwan':'金湾',
+  'Yunyan':'云岩','Nanming':'南明',
+  'Huaxi':'花溪','Anning':'安宁','Boshi':'博士',
+  'Shennan':'深南','Shangyuancun':'上园村','Shangyuan':'上园','Chaoyin':'潮音',
+  'Zhujiang':'珠江','Jinshui':'金水','Erqi':'二七','Zhongyuan':'中原',
+  'Guanshanhu':'观山湖','Zhongguancun':'中关村','Wudaokou':'五道口',
+  'RuadoViscondePacodeArcos':'拱形子爵路','TaiYuanJieShangQuan':'太原街商圈','PowerSupplySociety':'供电学会','StrategyStudies':'战略研究','LufengCommunity':'麓枫社区','BlossomWater':'水博花','ShandaNanlu':'山大南路','ZmaxCarrey':'凯瑞','HangzhouP':'杭州','XinDong':'新东','KangXin':'康新','MinDong':'闽东','Carrey':'凯瑞',
+  'ProductionConstructionCorps':'生产建设兵团','RuadoViscondePacodeArcos':'拱形子爵路','PowerSupplySociety':'供电学会','BlossomWaterMuseum':'水博花','CollectionLingang':'丽笙临港','BeitanChengguan':'北滩城关','YUANZHENGQIZHEN':'圆正启真','StrategyStudies':'战略研究','JieYangZhongshe':'揭阳中社','LufengCommunity':'麓枫社区','ComputerSociety':'计算机学会','ShangheJiangguo':'尚合江国','FulinTaohuadao':'富临桃花岛','OrientalGinza':'东方银座','DiaoyutaiSub':'钓鱼台分','Universities':'大学城','JinchuanDev':'金川开发','Haishanghai':'海上海','ShandaNanlu':'山大南路','Association':'学会','Cuipingshan':'翠屏山','ThreeGorges':'三峡','XingDaoHuan':'星岛环','AsianGames':'亚运','Tangjiawan':'唐家湾','Xiyuangong':'西园工','Qingshuihe':'清水河','GHICMulian':'广海创木莲','SidePusang':'浦桑侧','PanPacific':'泛太平洋','FourPoints':'福朋','ZMaxcarrey':'ZMax','Shijicheng':'世纪城','Gongshang':'工商','NearClock':'近钟楼','Shengyang':'沈阳','Zhancheng':'展城','Xianglong':'祥龙','Political':'政法','Greenland':'绿地','Gongchang':'工场','Lijiangxi':'漓江西','Pingshan':'坪山','Xuezheng':'学正','Jinchuan':'金川','Jinzhong':'晋中','Shazheng':'沙正','Shangjie':'上街','Aidinghu':'艾丁湖','Jiusheng':'九盛','Checheng':'车城','Forestry':'林业','Chengluo':'成洛','Division':'师','Tianyuan':'天元','Fenjiang':'汾江','MeiMeiMM':'美美','Shayibak':'沙依巴克','Songshan':'松山','HiChance':'海创','Jinfeng':'金凤','Lantian':'蓝天','Puchang':'蒲昌','Huanggu':'皇姑','TatChee':'达之','Kowloon':'九龙','XinDong':'新东','Yanshan':'燕山','Changle':'长乐','Wanghua':'望花','Jinjing':'津静','Gongjun':'军工','Hampton':'希尔顿欢朋','Xiangyu':'祥宇','Sanxian':'三线','Changda':'长大','Applied':'应用','HaiDong':'海东','Dianjin':'电金','KangXin':'康新','MinDong':'闽东','Zhutang':'竹塘','General':'将军','Tengyue':'腾越','TaiHeFu':'泰和府','Chongda':'重大','Jinling':'金陵','Theater':'剧场','Houhai':'后海','Weijin':'卫津','Huarui':'华瑞','Xidian':'西电','Xifeng':'西丰','Ningda':'宁大','Minhou':'闽侯','Dingke':'顶科','WentiW':'文体','Ramada':'华美达','Xizang':'西藏','Siping':'四平','Xiasha':'下沙','ErHuan':'二环','Purple':'紫','Yantai':'烟台','Holand':'荷兰','Museum':'博物馆','Huashi':'花市','KoGuan':'凯原','Donglu':'东路','Liyuan':'丽苑','Taiwei':'太伟','Baiade':'白云','Junyi':'君怡','Noble':'诺博','Ziyou':'自由','CityU':'城市大学','Ponte':'畔','Qixin':'七莘','Wenti':'文体','Bailu':'白鹭','Yunji':'云集','Goose':'雁塔','Dream':'梦想','ELICC':'东湖国际','Jinye':'锦业','Huqiu':'虎丘','Japan':'日本','Arula':'阿如拉','Helan':'贺兰','Atour':'亚朵','lDays':'7天','Super':'超级','TYUT':'太原理工大学','Yuci':'榆次','Wuyi':'武夷','Wude':'武德','ECNU':'华东师范大学','Sect':'段','Qufu':'曲阜','Bund':'外滩','Bao':'宝安','ETD':'经济开发区','NPU':'西北工业大学','Sub':'分','Air':'国际','IHG':'洲际','TBD':'待定','Lu':'麓','N':'北',
+  'Wangjing':'望京','Sanlitun':'三里屯','Guomao':'国贸',
+    'MingyuanNewTimes':'名苑新时代','GreenlandCentury':'绿地世纪','FontaineBlanche':'枫丹白露','Shuanghongqiao':'双红桥','MingyuanNewEra':'名苑新时代','GrandMetropark':'大都市公园','Jinyuanzhuang':'金源庄','WanyouConifer':'万有针叶','Zhongguancun':'中关村','BeiRenEtrong':'北人亦创','HolandGarden':'荷兰花园','Shijingshan':'石景山','Xixiangtang':'西乡塘','Huilongguan':'回龙观','Qingjiangpu':'清江浦','KuntaiNovel':'昆泰新颖','EmparkGrand':'世纪金源','Erxianqiao':'二仙桥','Chongchuan':'崇川','Yuhangtang':'余杭塘','Guangcheng':'广成','Nottingham':'诺丁汉','Honggutan':'红谷滩','Rongchang':'荣昌','Xingcheng':'兴城','Hongguang':'红光','Shuangliu':'双流','Ganjingzi':'甘井子','Longxiang':'龙翔','Xiangshan':'香山','Chenggong':'呈贡','Pengjiang':'蓬江','Shuimogou':'水磨沟','Chancheng':'禅城','Wanbailin':'万柏林','Chengjian':'城建','Beisihuan':'北四环','Qiongshan':'琼山','Jiongtong':'炯通','Dongchuan':'东川','Huangzhou':'黄州','Liverpool':'利物浦','Courtyard':'庭院','Qiantang':'钱塘','Hongshan':'红山','Xianning':'咸宁','Huangdao':'黄岛','Qingnian':'青年','Chongwen':'崇文','Tiangong':'天工','Sanjiang':'三江','Huanghai':'黄海','Chaowang':'潮王','Jiangnan':'江南','Zhenzhou':'镇州','Linggong':'灵工','Tianchen':'天成','Jiangjun':'将军','Mingyuan':'名苑','Jiangxia':'江夏','Xinglong':'兴隆','Toutunhe':'头屯河','Sipailou':'四牌楼','Shunqing':'顺庆','Chengbei':'城北','Hanzhong':'汉中','Ganjiang':'赣江','Shahekou':'沙河口','Qianshan':'千山','Shaoshan':'韶山','Changshu':'常熟','Xiacheng':'下城','Huazhong':'华中','Yongxing':'永兴','Donggang':'东港','Cangshan':'仓山','Meicheng':'梅城','Kangqiao':'康桥','Pingyuan':'平原','Gaoxiong':'高雄','Wenchang':'文昌','Songling':'松岭','Guantang':'官塘','Yangshan':'阳山','Yinjiang':'鄞江','Venetian':'威尼斯','Kaiyuan':'开元','Luolong':'洛龙','Pingyao':'平遥','Shenbei':'沈北','Jiulong':'九龙','Nanping':'南平','Beichen':'北辰','Binshui':'滨水','Huashan':'华山','Taikang':'泰康','Yinzhou':'鄞州','Yuzhong':'渝中','Ningliu':'宁六','Baiyang':'白杨','Wenjian':'文健','Fenghua':'奉化','Wuchang':'武昌','Xianlin':'仙林','Liuxian':'留仙','Bingang':'宾港','Dandong':'丹东','Xingtai':'邢台','Jingkou':'京口','Xiuyuan':'秀园','Hongdao':'红岛','Qujiang':'曲江','Donghua':'东华','Huiyang':'惠阳','Tiantou':'田头','Huaqiao':'华侨','Fucheng':'涪城','Jieyang':'揭阳','Laodong':'劳动','Hongjin':'宏进','Weixing':'卫星','Lianxin':'联信','Huancui':'环翠','Beiqing':'北清','Huizhan':'会展','Tuanjie':'团结','Huawise':'华智','Xiyuan':'西苑','Wushan':'巫山','Shinan':'市南','Meilan':'美兰','Xishan':'西山','Jintan':'金坛','Lushan':'庐山','Shuren':'树人','Jinhua':'金华','Daping':'大坪','Xiling':'西陵','Yazhou':'崖州','Mozhou':'莫愁','Qixing':'七星','Mingli':'明理','Youhao':'友好','Juxian':'聚贤','Donghu':'东湖','Fenghe':'丰和','Yingze':'迎泽','Jinhai':'金海','Seyuan':'啬园','Nanhai':'南海','Huixin':'惠新','Luoshi':'珞狮','Xinnan':'新南','Tiande':'天德','Boyuan':'博园','Shuibo':'水博','Hushan':'虎山','Tiandu':'天都','Nanbin':'南滨','Haiyue':'海悦','Deyuan':'德园','Lianhu':'莲湖','Yufeng':'鱼峰','Ziyang':'资阳','Wudong':'武东','Shabei':'沙贝','Keyuan':'科苑','Fuxing':'复兴','Optics':'光学','Panyu':'番禺','Hohai':'河海','Daxue':'大学','Liuhe':'六合','Xihua':'西华','Xindu':'新都','Jinji':'金鸡','Binhe':'滨河','Kexue':'科学','Xixia':'西夏','Luoyu':'珞喻','Qilin':'麒麟','Nanan':'南岸','Binhu':'滨湖','Fuhai':'福海','Taihe':'太和','Shida':'石大','Yudao':'御道','Yaodu':'尧都','Ruili':'瑞丽','Nanhu':'南湖','Baohe':'包河','Xindi':'新地','Yaohu':'瑶湖','Metro':'地铁','South':'南','North':'北','Pidu':'郫都','Xihu':'西湖','Lihu':'蠡湖','Hexi':'河西','Dagu':'大沽','Gusu':'姑苏','York':'约克','Mega':'大型','Lido':'丽都',
+  // 常见街道
+  'Shengli':'胜利','Tianshan':'天山','Changjiang':'长江','Huanghe':'黄河',
+  'Dongfang':'东方','Xuefu':'学府','Xueyuan':'学院','Fuxing':'复兴',
+  'Youyi':'友谊','Yingbin':'迎宾','Wenhua':'文化','Guangming':'光明',
+  'Tongji':'同济','Ligong':'理工','Shidai':'时代','Tiyu':'体育',
+  'Xingfu':'幸福','Fuhua':'富华','Yuelu':'岳麓','Dushu':'独墅',
+  'Hongqiao':'虹桥','Waihuan':'外环','Zhonghuan':'中环','Neihuan':'内环',
+  'Baiyun':'白云','Tianhe':'天河','Yuexiu':'越秀','Luogang':'萝岗',
+  'Cuiping':'翠屏','Jinjiang':'锦江','Yuhua':'雨花','Furong':'芙蓉',
+  'Kaifu':'开福','Yuelu':'岳麓','Tianxin':'天心','Wangcheng':'望城',
+  'Renmin':'人民','Jiefang':'解放','Zhongshan':'中山','Jianshe':'建设','Heping':'和平',
+  'Changjiang':'长江','Huanghe':'黄河',
+};
+
+const HOTEL_CN = {
+  'The Westin':'威斯汀','Westin':'威斯汀','Sheraton':'喜来登','Hilton':'希尔顿',
+  'Marriott':'万豪','Marriot':'万豪','Crowne Plaza':'皇冠假日','CROWNE PLAZA':'皇冠假日',
+  'Hyatt':'凯悦','Regency':'丽晶','Four Seasons':'四季','InterContinental':'洲际',
+  'Radisson':'丽笙','Sofitel':'索菲特','Shangri-La':'香格里拉','Shangri La':'香格里拉',
+  'Wyndham':'温德姆','Renaissance':'万丽','Pullman':'铂尔曼','Novotel':'诺富特',
+};
+
+function translateAddress(addr) {
+  if (!addr) return '';
+  function esc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  let s = addr;
+
+  // ---- 1. fix misspellings ----
+  s = s.replace(/\bDistric\b|\bDistrik\b|\bDistinct\b/gi, 'District');
+  s = s.replace(/\bSubdistrict\b/gi, 'District');
+  s = s.replace(/\bAve\b/gi, 'Avenue');
+  s = s.replace(/\bRd\b\.?/gi, 'Road');
+  s = s.replace(/\bBlvd\b\.?/gi, 'Boulevard');
+
+  // ---- 2. hotel brands ----
+  for (const [en, cn] of Object.entries(HOTEL_CN).sort((a,b)=>b[0].length-a[0].length))
+    s = s.replace(new RegExp(esc(en), 'gi'), cn);
+
+  // ---- 3. multi-word phrases (BEFORE single-word translation) ----
+  const P = [
+    [/University of Science and Technology/gi,'科技大学'],
+    [/University of Electronic Science and Technology/gi,'电子科技大学'],
+    [/University of Posts and Telecommunications/gi,'邮电大学'],
+    [/Institute of Technology/gi,'理工学院'],
+    [/Normal University/gi,'师范大学'],
+    [/Polytechnic University/gi,'理工大学'],
+    [/Polytechnical University/gi,'理工大学'],
+    [/University of Finance and Economics/gi,'财经大学'],
+    [/Jiaotong University/gi,'交通大学'],
+    [/Aeronautics and Astronautics/gi,'航空航天'],
+    [/Science and Technology/gi,'科技'],
+    [/Research Institute/gi,'研究院'],
+    [/Academy of Sciences/gi,'科学院'],
+    [/High-Tech/gi,'高新'],[/Hi-Tech/gi,'高新'],
+    [/High-tech/gi,'高新'],[/Hi-tech/gi,'高新'],
+    [/Economic and Technological Development Zone/gi,'经济技术开发区'],
+    [/Economic & Technological Development Zone/gi,'经济技术开发区'],
+    [/High-tech Industrial Development Zone/gi,'高新技术开发区'],
+    [/New District/gi,'新区'],[/New Area/gi,'新区'],[/New Town/gi,'新城'],
+    [/Autonomous Region/gi,'自治区'],
+    [/Exhibition and Conference/gi,'会展'],
+    [/Convention and Exhibition/gi,'会展'],
+    [/Exhibition Center/gi,'会展中心'],
+    [/Convention Center/gi,'会展中心'],
+    [/International Conference Center/gi,'国际会议中心'],
+    [/International Convention Center/gi,'国际会展中心'],
+    [/Conference Center/gi,'会议中心'],
+    [/Expo Center/gi,'博览中心'],
+    [/Industrial Park/gi,'工业园'],
+    [/Software Park/gi,'软件园'],
+    [/Science Park/gi,'科学园'],
+    [/Innovation Institute/gi,'创新研究院'],
+    [/Innovation Center/gi,'创新中心'],
+    [/Business Center/gi,'商务中心'],
+    [/Business Hotel/gi,'商务酒店'],
+    [/Shopping Center/gi,'购物中心'],
+    [/Student Center/gi,'学生中心'],
+    [/Student Activity Center/gi,'学生活动中心'],
+    [/Innovation Park/gi,'创新园'],
+    [/Golf Course/gi,'高尔夫球场'],
+    [/Hot Spring/gi,'温泉'],
+    [/Holiday Inn/gi,'假日酒店'],
+    [/Country Garden/gi,'碧桂园'],
+    [/Outer Ring/gi,'外环'],[/Inner Ring/gi,'内环'],
+    [/First Ring/gi,'一环'],[/Second Ring/gi,'二环'],
+    [/Third Ring/gi,'三环'],[/Fourth Ring/gi,'四环'],
+    [/Middle Ring/gi,'中环'],[/Middle Section/gi,'中段'],
+    [/Tsinghua University/gi,'清华大学'],
+    [/Beihang University/gi,'北京航空航天大学'],
+    [/Sun Yat-sen University/gi,'中山大学'],
+    [/Sun Yat-Sen University/gi,'中山大学'],
+    [/Hong Kong/gi,'香港'],[/Macau/gi,'澳门'],[/Macao/gi,'澳门'],
+    [/Uygur Autonomous Region/gi,'维吾尔自治区'],
+    [/Zhuang Autonomous Region/gi,'壮族自治区'],
+    [/Inner Mongolia/gi,'内蒙古'],
+    [/Times Square/gi,'时代广场'],
+  ];
+  for (const [re, cn] of P) s = s.replace(re, cn);
+
+  // ---- 4. provinces, cities, pinyin ----
+  for (const [en, cn] of Object.entries(PROVINCE_CN).sort((a,b)=>b[0].length-a[0].length))
+    s = s.replace(new RegExp('\\b'+esc(en)+'\\b','gi'), cn);
+  for (const [en, cn] of Object.entries(CITY_CN).sort((a,b)=>b[0].length-a[0].length))
+    s = s.replace(new RegExp('\\b'+esc(en)+'\\b','gi'), cn);
+  for (const [en, cn] of Object.entries(PINYIN_CN).sort((a,b)=>b[0].length-a[0].length))
+    s = s.replace(new RegExp('\\b'+esc(en)+'\\b','gi'), cn);
+
+  // ---- 5. remaining fixed phrases ----
+  s = s.replace(/Institute of\s*/gi,'学院');
+  s = s.replace(/University of\s*/gi,'大学');
+  s = s.replace(/\bChina\b/gi,'中国');
+  s = s.replace(/\bNo\.\s*(\d+[A-Za-z]?)\b/gi,'$1号');
+  s = s.replace(/SAR/gi,'');
+
+  // ---- 6. comprehensive single-word terms ----
+  // CRITICAL: compound directions BEFORE single directions!
+  const T = [
+    // --- directions (compounds FIRST) ---
+    [/Northeast\b/gi,'东北'],[/Northwest\b/gi,'西北'],
+    [/Southeast\b/gi,'东南'],[/Southwest\b/gi,'西南'],
+    [/Southern\b/gi,'南'],[/Northern\b/gi,'北'],
+    [/Eastern\b/gi,'东'],[/Western\b/gi,'西'],
+    [/North\b/gi,'北'],[/South\b/gi,'南'],[/East\b/gi,'东'],[/West\b/gi,'西'],
+    [/Middle\b/gi,'中'],[/Inside\b/gi,'内'],
+    // --- ordinal suffixes (MUST come before noise-word removal) ---
+    [/(\d)(?:st|nd|rd|th)\b/gi,'$1'],
+    // --- institutions ---
+    [/University\b/gi,'大学'],[/College\b/gi,'学院'],[/Institute\b/gi,'学院'],
+    [/Academy\b/gi,'学院'],[/School\b/gi,'学院'],[/Campus\b/gi,'校区'],
+    [/Hotel\b/gi,'酒店'],[/Resort\b/gi,'度假村'],[/Inn\b/gi,'酒店'],[/Hostel\b/gi,'酒店'],
+    [/International\b/gi,'国际'],[/Convention\b/gi,'会展'],[/Exhibition\b/gi,'展览'],
+    [/Conference\b/gi,'会议'],[/Expo\b/gi,'博览'],[/Center\b/gi,'中心'],[/Centre\b/gi,'中心'],
+    [/Building\b/gi,'楼'],[/Hall\b/gi,'厅'],[/Room\b/gi,'室'],[/Tower\b/gi,'塔'],
+    // --- roads ---
+    [/Road\b/gi,'路'],[/Street\b/gi,'街'],[/Avenue\b/gi,'大道'],[/Boulevard\b/gi,'大道'],
+    [/Highway\b/gi,'高速'],[/Bridge\b/gi,'桥'],[/Gate\b/gi,'门'],
+    // --- administrative ---
+    [/District\b/gi,'区'],[/Province\b/gi,'省'],[/City\b/gi,'市'],
+    [/County\b/gi,'县'],[/Town\b/gi,'镇'],[/Township\b/gi,'乡'],[/Village\b/gi,'村'],
+    [/Prefecture\b/gi,'州'],[/Region\b/gi,'地区'],
+    // --- landmarks ---
+    [/Square\b/gi,'广场'],[/Plaza\b/gi,'广场'],[/Park\b/gi,'园'],
+    [/Garden\b/gi,'花园'],[/Gardens\b/gi,'花园'],
+    [/Lake\b/gi,'湖'],[/Mountain\b/gi,'山'],[/Hill\b/gi,'山'],[/Island\b/gi,'岛'],
+    [/Coast\b/gi,'海岸'],[/Bay\b/gi,'湾'],[/River\b/gi,'河'],[/Ocean\b/gi,'海'],
+    [/Spring\b/gi,'泉'],[/Valley\b/gi,'谷'],[/Forest\b/gi,'林'],
+    // --- fields ---
+    [/Innovation\b/gi,'创新'],[/Electronic\b/gi,'电子'],[/Electrical\b/gi,'电气'],
+    [/Information\b/gi,'信息'],[/Communication\b/gi,'通信'],[/Telecommunications\b/gi,'电信'],
+    [/Engineering\b/gi,'工程'],[/Technology\b/gi,'技术'],[/Technological\b/gi,'技术'],
+    [/Science\b/gi,'科学'],[/Sciences\b/gi,'科学'],
+    [/Robotics\b/gi,'机器人'],[/Aerospace\b/gi,'航天'],[/Aviation\b/gi,'航空'],
+    [/Petroleum\b/gi,'石油'],[/Petrochemical\b/gi,'石化'],
+    [/Mechanical\b/gi,'机械'],[/Industrial\b/gi,'工业'],[/Chemical\b/gi,'化工'],
+    [/Economic\b/gi,'经济'],[/Economics\b/gi,'经济'],[/Finance\b/gi,'金融'],
+    [/Business\b/gi,'商务'],[/Trade\b/gi,'贸易'],[/Industry\b/gi,'工业'],
+    [/Development\b/gi,'开发'],[/Zone\b/gi,'区'],[/Area\b/gi,'区'],
+    [/Research\b/gi,'研究'],[/Laboratory\b/gi,'实验室'],[/Laboratories\b/gi,'实验室'],
+    [/Normal\b/gi,'师范'],[/Polytechnic\b/gi,'理工'],[/Polytechnical\b/gi,'理工'],
+    [/Education\b/gi,'教育'],[/Higher\b/gi,'高等'],[/Advanced\b/gi,'高等'],
+    [/National\b/gi,'国家'],[/Central\b/gi,'中央'],[/Municipal\b/gi,'市立'],
+    [/New\b/gi,'新'],[/Old\b/gi,'旧'],[/Grand\b/gi,'大'],[/Big\b/gi,'大'],
+    [/World\b/gi,'世界'],[/Century\b/gi,'世纪'],[/Times\b/gi,'时代'],[/Era\b/gi,'时代'],
+    [/Friendship\b/gi,'友谊'],[/Peace\b/gi,'和平'],[/Union\b/gi,'联合'],
+    [/Dragon\b/gi,'龙'],[/Golden\b/gi,'金'],[/Silver\b/gi,'银'],
+    [/Dynasty\b/gi,'王朝'],[/Palace\b/gi,'宫'],[/Pagoda\b/gi,'塔'],
+    [/Holiday\b/gi,'假日'],[/Golf\b/gi,'高尔夫'],
+    [/Art\b/gi,'艺术'],[/Arts\b/gi,'艺术'],[/Culture\b/gi,'文化'],[/Cultural\b/gi,'文化'],
+    [/Sports\b/gi,'体育'],[/Olympic\b/gi,'奥林匹克'],
+    [/Design\b/gi,'设计'],[/Creative\b/gi,'创意'],
+    [/Auto\b/gi,'汽车'],[/Marine\b/gi,'海洋'],[/Maritime\b/gi,'海事'],
+    [/Port\b/gi,'港'],[/Airport\b/gi,'机场'],[/Terminal\b/gi,'航站楼'],
+    [/Medical\b/gi,'医疗'],[/Health\b/gi,'健康'],[/Hospital\b/gi,'医院'],
+    [/Software\b/gi,'软件'],[/Computing\b/gi,'计算'],[/Supercomputing\b/gi,'超算'],
+    [/Network\b/gi,'网络'],[/Systems\b/gi,'系统'],[/Data\b/gi,'数据'],
+    [/Traditional\b/gi,'传统'],[/Modern\b/gi,'现代'],[/Scenery\b/gi,'风景'],
+    [/Ring\b/gi,'环'],[/Section\b/gi,'段'],
+    [/State\b/gi,'国家'],[/Key\b/gi,'重点'],[/Core\b/gi,'核心'],
+    [/Courtyard\b/gi,'庭院'],[/Crown\b/gi,'皇冠'],[/Rose\b/gi,'玫瑰'],
+    // --- noise words → remove ---
+    [/\band\b/gi,''],[/\bthe\b/gi,''],[/\bof\b/gi,''],[/\bin\b/gi,''],
+    [/\bfor\b/gi,''],[/\bat\b/gi,''],[/\bby\b/gi,''],[/\bis\b/gi,''],
+    [/\ban\b/gi,''],[/\bno\b/gi,''],[/\bto\b/gi,''],[/\bon\b/gi,''],
+    [/\bst\b/gi,''],[/\brd\b/gi,''],[/\bth\b/gi,''],[/\bnd\b/gi,''],
+    [/\bthe\b/gi,''],[/\bwith\b/gi,''],[/\bpr\b/gi,''],[/\bny\b/gi,''],
+    [/\bfrom\b/gi,''],[/\bvia\b/gi,''],[/\bits\b/gi,''],
+    [/[\s,]+/g,' '],
+  ];
+  for (const [re, cn] of T) s = s.replace(re, cn);
+
+  // ---- 6b. strip zip codes + last-resort fixes ----
+  s = s.replace(/(\d{5,6})/g, '');
+  // separate digits glued to pinyin ("27Shanda" → "27 Shanda")
+  s = s.replace(/(\d)([A-Z])/g, '$1 $2');
+  s = s.replace(/([a-z])(\d)/gi, '$1 $2');
+  // city names followed by digits ("Hangzhou310015" → "Hangzhou")
+  s = s.replace(/([A-Za-z]+)\d+/g, '$1');
+  // break up fused campus names
+  s = s.replace(/Campus([A-Z])/g, 'Campus $1');
+  s = s.replace(/University([A-Z])/g, 'University $1');
+  s = s.replace(/College([A-Z])/g, 'College $1');
+  // remaining compound phrases (after single-word, spaces may be gone)
+  s = s.replace(/Academic\s*Exchange/gi,'学术交流');
+  s = s.replace(/University\s*Town/gi,'大学城');
+  s = s.replace(/Uygur\s*/gi,'维吾尔');
+  s = s.replace(/Zhuang\s*/gi,'壮');
+  s = s.replace(/Hong\s*Kong/gi,'香港');
+  s = s.replace(/Northeastern\s+University/gi,'东北大学');
+  s = s.replace(/Victories\b/gi,'胜利');
+  s = s.replace(/Hongqi\b/gi,'红旗');
+  s = s.replace(/Nangang\b/gi,'南岗');
+  s = s.replace(/Wuhua\b/gi,'五华');
+  s = s.replace(/Xifu\b/gi,'西府');
+  s = s.replace(/\bMetro\b/gi,'大都会');
+  s = s.replace(/\bHightech\b/gi,'高新');
+  s = s.replace(/\bSci\b[\s-]*[Tt]ech\b/gi,'科技');
+  s = s.replace(/\bSci\b/gi,'科学');
+  s = s.replace(/\bTech\b/gi,'技术');
+  s = s.replace(/\bBio\b/gi,'生物');
+  s = s.replace(/\bLaw\b/gi,'法学');
+  s = s.replace(/\bEm\b/gi,'电磁');
+  s = s.replace(/\bChang\b/gi,'场');
+  s = s.replace(/\bNeu\b/gi,'东北大学');
+  s = s.replace(/\bXi\b/gi,'西');
+  s = s.replace(/\bNan\b/gi,'南');
+  s = s.replace(/\bRen\b/gi,'仁');
+  s = s.replace(/\bAi\b/gi,'爱');
+  s = s.replace(/\bXian\b/gi,'县');
+  s = s.replace(/\bYan\b/gi,'雁');
+  s = s.replace(/\bP\.?\s*R\.?\s*China\b/gi,'中国');
+  s = s.replace(/\bP\.?\s*R\.?\s*C\b/gi,'中国');
+  // remaining pinyin that regex-based term matching misses
+  s = s.replace(/Third\b/gi,'第三');
+  s = s.replace(/Jiujiang\b/gi,'九江');
+  s = s.replace(/\bChinese\b/gi,'中国');
+  s = s.replace(/\bHigh\b/gi,'高');
+  s = s.replace(/\bHui\b/gi,'回');
+  s = s.replace(/\bXiang\b/gi,'翔');
+  s = s.replace(/Chengnan\b/gi,'城南');
+  s = s.replace(/ChengNan\b/gi,'城南');
+  s = s.replace(/Fontaine\s*Blanche/gi,'枫丹白露');
+  s = s.replace(/Hehai\b/gi,'河海');
+  s = s.replace(/BeiRenEtrong\b/gi,'北人亦创');
+  s = s.replace(/WanyouConifer\b/gi,'万有针叶');
+  s = s.replace(/TongzenTaiyuanJieShangquan\b/gi,'太原街上商圈');
+  s = s.replace(/Tongzen\b/gi,'');
+  s = s.replace(/Youth\b/gi,'青年');
+  s = s.replace(/Yecheng\b/gi,'冶城');
+  s = s.replace(/Software\b/gi,'软件');
+  s = s.replace(/Taiwei\s*Scenery/gi,'太伟风景');
+  s = s.replace(/Scenery\b/gi,'风景');
+  s = s.replace(/\bWuyishan\b/gi,'武夷山');
+  s = s.replace(/Supercomputing/gi,'超算');
+  s = s.replace(/HangzhouP\b/gi,'杭州');
+  s = s.replace(/Yongqian\b/gi,'永谦');
+  s = s.replace(/Tongze\b/gi,'同泽');
+  s = s.replace(/Diaoyutai\b/gi,'钓鱼台');
+  s = s.replace(/ShandaNanlu\b/gi,'山大南路');
+  s = s.replace(/PowerSupplySociety\b/gi,'供电学会');
+  s = s.replace(/BlossomWater\b/gi,'水博花');
+  s = s.replace(/StrategyStudies\b/gi,'战略研究');
+  s = s.replace(/LufengCommunity\b/gi,'麓枫社区');
+  s = s.replace(/KangXin\b/gi,'康新');
+  s = s.replace(/MinDong\b/gi,'闽东');
+  s = s.replace(/TaiyuanJieShangquan\b/gi,'太原街商圈');
+  s = s.replace(/Zmax\b/gi,'');
+  s = s.replace(/\bDev\b/gi,'开发');
+  s = s.replace(/\bDong\b/gi,'东');
+  s = s.replace(/HangzhouP\b/gi,'杭州');
+  s = s.replace(/Power\s*Supply\s*Society\b/gi,'供电学会');
+  s = s.replace(/Shanda\s*Nan\s*lu\b/gi,'山大南路');
+  s = s.replace(/Strategy\s*Studies\b/gi,'战略研究');
+  s = s.replace(/Lufeng\s*Community\b/gi,'麓枫社区');
+  s = s.replace(/Kang\s*Xin\b/gi,'康新');
+  s = s.replace(/\bMin\b/gi,'闽');
+  s = s.replace(/\bXin\b/gi,'新');
+  s = s.replace(/Ruado\s*Visconde\s*Paco\s*de\s*Arcos\b/gi,'拱形子爵路');
+  // Macau Portuguese addresses — normalize
+  s = s.replace(/Estrada\s*da\s*/gi,'');
+  s = s.replace(/Senhora\s*da\s*Esperanca\s*Cotai/gi,'澳门望德圣母湾');
+  s = s.replace(/Baiaden\b/gi,'');
+
+  // ---- 7. split ----
+  let parts = s.split(',').map(p => p.trim()).filter(Boolean);
+
+  // ---- 8. merge spaces + street number reorder + 2nd translation pass ----
+  parts = parts.map(p => p.replace(/\s+/g,''));
+  // break up fused compounds so individual words can be translated
+  parts = parts.map(p => p.replace(/Campus([A-Z])/g,'Campus $1').replace(/University([A-Z])/g,'University $1').replace(/College([A-Z])/g,'College $1').replace(/Hotel([A-Z])/g,'Hotel $1'));
+  // re-apply pinyin + term translations on merged parts
+  for (const [en, cn] of Object.entries(PINYIN_CN).sort((a,b)=>b[0].length-a[0].length))
+    parts = parts.map(p => p.replace(new RegExp('\\b'+esc(en)+'\\b','gi'), cn));
+  for (const [re, cn] of T)
+    parts = parts.map(p => p.replace(re, cn));
+
+  // street number reorder
+  const ST = '(路|街|大道|巷|弄|村|里|园|庄|苑|镇|区|州|县|环|段|桥|门|岛|山|湖)';
+  parts = parts.map(p => {
+    p = p.replace(new RegExp('^(\\d+号)(.*?)'+ST+'$'), '$2$3$1');
+    p = p.replace(new RegExp('^(\\d+)(?!号)(.*?)'+ST+'$'), '$2$3$1号');
+    return p;
+  });
+
+  // ---- 9. remove zip codes ----
+  let clean = [];
+  for (let p of parts) {
+    if (/^\d{4,6}$/.test(p)) continue;
+    p = p.replace(/\s+\d{4,6}$/, '').replace(/^\d{4,6}\s+/, '');
+    p = p.replace(/\d{5,6}$/, '');
+    if (p) clean.push(p);
+  }
+
+  // ---- 10. dedup ----
+  const seen = new Set();
+  clean = clean.filter(p => {
+    const key = p.replace(/[省市]$/, '');
+    if (key.length < 2) return true;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  return clean.join('，');
+}
+
+function shortAddressCN(addr) {
+  if (!addr) return '';
+  const full = translateAddress(addr);
+  const parts = full.split('，');
+  if (parts.length <= 3) return full;
+  return parts.slice(0, 2).concat(parts.slice(-2)).join('，');
+}
+
+// ============ Tier Labels ============
+const TIER_LABELS = {
+  S: '🏆 S级 · 顶级',
+  A: '🥇 A级 · 高质量',
+  B: '🥈 B级 · 良好',
+  C: '🥉 C级 · 一般',
+};
+
+// ============ Global State ============
+let allConferences = [];
+let filteredConferences = [];
+let displayCount = 0;
+const PAGE_SIZE = 30;
+
+// ============ Init ============
+async function init() {
+  try {
+    const [confRes, statsRes, filterRes] = await Promise.all([
+      fetch('/api/conferences'),
+      fetch('/api/stats'),
+      fetch('/api/filters')
+    ]);
+    const confData = await confRes.json();
+    const stats = await statsRes.json();
+    const filters = await filterRes.json();
+
+    allConferences = confData.conferences;
+    filteredConferences = [...allConferences];
+    displayCount = 0;
+
+    renderStats(stats);
+    populateFilters(filters);
+    loadMore();
+  } catch (err) {
+    document.getElementById('confGrid').innerHTML =
+      '<div class="no-results"><div class="icon">⚠️</div><p>加载数据失败，请确保已运行 <code>node demo/server.js</code></p></div>';
+  }
+}
+
+// ============ Stats ============
+function renderStats(stats) {
+  document.getElementById('statTotal').textContent = stats.total;
+  document.getElementById('statS').textContent = stats.byTier.S || 0;
+  document.getElementById('statA').textContent = stats.byTier.A || 0;
+  document.getElementById('statB').textContent = stats.byTier.B || 0;
+  document.getElementById('statC').textContent = stats.byTier.C || 0;
+}
+
+// ============ Populate Filters ============
+function populateFilters(f) {
+  // 主办方筛选（只显示 IEEE 学会，避免太多选项）
+  const sponsorSelect = document.getElementById('filterSponsor');
+  f.ieeeSocieties.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = s;
+    sponsorSelect.appendChild(opt);
+  });
+  // 添加常用其他主办方
+  const popularOthers = ['China Council', 'Chinese Association for Artificial Intelligence', 'Chinese Institute of Electronics - CIE'];
+  popularOthers.forEach(s => {
+    if (f.allSponsors.includes(s)) {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = '📌 ' + s;
+      sponsorSelect.appendChild(opt);
+    }
+  });
+
+  const citySelect = document.getElementById('filterCity');
+  f.cities.forEach(city => {
+    const opt = document.createElement('option');
+    opt.value = city;
+    opt.textContent = cityCN(city);
+    citySelect.appendChild(opt);
+  });
+
+  const yearSelect = document.getElementById('filterYear');
+  f.years.forEach(year => {
+    const opt = document.createElement('option');
+    opt.value = year; opt.textContent = year + '年';
+    yearSelect.appendChild(opt);
+  });
+
+  const monthSelect = document.getElementById('filterMonth');
+  const monthNames = { '01':'1月','02':'2月','03':'3月','04':'4月','05':'5月','06':'6月','07':'7月','08':'8月','09':'9月','10':'10月','11':'11月','12':'12月' };
+  (f.months || []).forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = monthNames[m] || m + '月';
+    monthSelect.appendChild(opt);
+  });
+
+  const formatSelect = document.getElementById('filterFormat');
+  const fmtLabels = { hybrid: '线上线下混合', inperson: '仅线下', virtual: '仅线上' };
+  f.formats.forEach(fmt => {
+    const opt = document.createElement('option');
+    opt.value = fmt; opt.textContent = fmtLabels[fmt] || fmt;
+    formatSelect.appendChild(opt);
+  });
+
+  // 更新城市数
+  document.getElementById('statCities').textContent = f.cities.length;
+}
+
+// ============ Format Helpers ============
+function formatDate(start, end) {
+  const fmt = d => {
+    if (!d) return '';
+    return new Date(d).toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' });
+  };
+  const s = fmt(start), e = fmt(end);
+  return s === e ? s : s + ' - ' + e;
+}
+
+function formatYear(start) { return start ? start.substring(0, 4) : ''; }
+function parseFields(about) { return about ? about.split(';').map(s => s.trim()).filter(Boolean) : []; }
+
+// ============ Render ============
+function renderConferences(confs) {
+  const grid = document.getElementById('confGrid');
+  const fmtLabels = { hybrid: '线上线下混合', inperson: '仅线下', virtual: '仅线上' };
+
+  confs.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'conf-card tier-' + (c.tier || 'C');
+    card.onclick = () => showDetail(c);
+
+    const fields = parseFields(c.about);
+    const year = formatYear(c.startDate);
+
+    card.innerHTML = `
+      <div class="conf-card-header">
+        <div class="conf-title">${escapeHtml(c.eventTitle)}</div>
+        <span class="tier-badge ${c.tier}">${TIER_LABELS[c.tier] || c.tier + '级'}</span>
+      </div>
+      <div class="conf-meta">
+        <span>📅 ${formatDate(c.startDate, c.endDate)}</span>
+        <span>📍 ${escapeHtml(cityCN(c.location?.city || ''))}</span>
+        <span>${c.location?.country === 'China' ? '🇨🇳' : '🏛️'} ${c.location?.country === 'China' ? '中国' : escapeHtml(c.location?.country || '')}</span>
+      </div>
+      ${c.sponsors ? `<div class="conf-sponsors" title="${escapeHtml(c.sponsors)}">主办: ${escapeHtml(c.sponsors)}</div>` : ''}
+      ${c.venueAddress && c.venueAddress[0] ? `<div class="conf-address" title="${escapeHtml(translateAddress(c.venueAddress[0].fullAddress))}">📍 ${escapeHtml(translateAddress(c.venueAddress[0].shortAddress))}</div>` : ''}
+      <div class="conf-tags">
+        <span class="tag tag-format">${fmtLabels[c.eventFormat] || c.eventFormat || ''}</span>
+        ${c.location?.city ? `<span class="tag tag-city">${escapeHtml(cityCN(c.location.city))}</span>` : ''}
+        ${year ? `<span class="tag tag-year">${year}</span>` : ''}
+        ${fields.slice(0, 2).map(f => `<span class="tag tag-field" title="${escapeHtml(f)}">${escapeHtml(f)}</span>`).join('')}
+        ${fields.length > 2 ? `<span class="tag tag-field">+${fields.length - 2}</span>` : ''}
+        ${c.tierReason ? `<span class="tag tag-tier-reason" title="评级依据">💡 ${escapeHtml(c.tierReason)}</span>` : ''}
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  document.getElementById('resultInfo').textContent =
+    `显示 ${Math.min(displayCount, filteredConferences.length)} / ${filteredConferences.length} 条`;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ============ Modal ============
+function showDetail(c) {
+  const fmtLabels = { hybrid: '线上线下混合', inperson: '仅线下', virtual: '仅线上' };
+  const keywords = c.keywords && c.keywords.length ? c.keywords : parseFields(c.about);
+  const addr = c.venueAddress && c.venueAddress[0]
+    ? translateAddress(c.venueAddress[0].fullAddress)
+    : cityCN(c.location?.city || '') + '，' + (c.location?.country === 'China' ? '中国' : (c.location?.country || ''));
+  const callForPapers = c.callForPapers
+    ? new Date(c.callForPapers).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })
+    : '未公布';
+  const confUrl = c.conferenceUrl ? (c.conferenceUrl.startsWith('http') ? c.conferenceUrl : 'https://' + c.conferenceUrl) : '';
+  const detailUrl = 'https://conferences.ieee.org' + (c.url || '/conf/details?id=' + c.eventId);
+
+  const html = `
+    <div class="modal-header">
+      <h3>${escapeHtml(c.eventTitle)}</h3>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <span class="tier-badge ${c.tier}">${TIER_LABELS[c.tier]}</span>
+        <span style="font-size:.78rem;color:#999">评级依据：${escapeHtml(c.tierReason || '')}</span>
+      </div>
+
+      <div class="modal-section">
+        <h4>📅 会议时间</h4>
+        <p>${formatDate(c.startDate, c.endDate)} · ${c.startDate || ''} 至 ${c.endDate || ''}</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>📍 会议地点</h4>
+        <p>${escapeHtml(addr)}</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>🎯 会议形式</h4>
+        <p>${fmtLabels[c.eventFormat] || c.eventFormat || ''}</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>🏛️ 主办方</h4>
+        <p>${escapeHtml(c.sponsors || '未提供')}</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>🏷️ 关键词 / 领域</h4>
+        <div class="modal-kw">${keywords.map(k => `<span>${escapeHtml(k)}</span>`).join('')}</div>
+      </div>
+
+      ${c.scope ? `
+      <div class="modal-section">
+        <h4>📖 会议简介</h4>
+        <p>${escapeHtml(c.scope)}</p>
+      </div>` : ''}
+
+      <div class="modal-section">
+        <h4>📝 征稿截止</h4>
+        <p>${callForPapers}</p>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        ${confUrl ? `<a href="${escapeHtml(confUrl)}" target="_blank" class="btn-reset" style="text-decoration:none;color:var(--primary);border-color:var(--primary)">🌐 会议官网</a>` : ''}
+        <a href="${detailUrl}" target="_blank" class="btn-reset" style="text-decoration:none">📋 IEEE 官方页面</a>
+        ${c.eventContact ? `<span style="font-size:.8rem;color:#999;display:flex;align-items:center">📧 ${escapeHtml(c.eventContact)}</span>` : ''}
+      </div>
+    </div>`;
+
+  document.getElementById('modalContent').innerHTML = html;
+  document.getElementById('modalOverlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// ============ Load More ============
+function loadMore() {
+  const start = displayCount;
+  const end = Math.min(start + PAGE_SIZE, filteredConferences.length);
+  const batch = filteredConferences.slice(start, end);
+
+  if (batch.length === 0) {
+    document.getElementById('loadMoreWrap').style.display = 'none';
+    return;
+  }
+
+  renderConferences(batch);
+  displayCount = end;
+
+  document.getElementById('loadMoreWrap').style.display =
+    displayCount >= filteredConferences.length ? 'none' : '';
+}
+
+// ============ Filter ============
+function applyFilters() {
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+  const tier = document.getElementById('filterTier').value;
+  const sponsor = document.getElementById('filterSponsor').value;
+  const city = document.getElementById('filterCity').value;
+  const year = document.getElementById('filterYear').value;
+  const month = document.getElementById('filterMonth').value;
+  const format = document.getElementById('filterFormat').value;
+
+  filteredConferences = allConferences.filter(c => {
+    if (search) {
+      const haystack = (c.eventTitle + ' ' + (c.sponsors || '') + ' ' + (c.about || '')).toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    if (tier && c.tier !== tier) return false;
+    if (sponsor && !(c.sponsors || '').includes(sponsor)) return false;
+    if (city && (c.location?.city || '') !== city) return false;
+    if (year && !(c.startDate || '').startsWith(year)) return false;
+    if (month && (c.startDate || '').substring(5, 7) !== month) return false;
+    if (format && c.eventFormat !== format) return false;
+    return true;
+  });
+
+  displayCount = 0;
+  document.getElementById('confGrid').innerHTML = '';
+  document.getElementById('loadMoreWrap').style.display = '';
+
+  if (filteredConferences.length === 0) {
+    document.getElementById('confGrid').innerHTML =
+      '<div class="no-results"><div class="icon">📭</div><p>没有找到匹配的会议</p></div>';
+    document.getElementById('loadMoreWrap').style.display = 'none';
+    document.getElementById('resultInfo').textContent = '共 0 条';
+  } else {
+    loadMore();
+  }
+}
+
+function resetFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('filterTier').value = '';
+  document.getElementById('filterSponsor').value = '';
+  document.getElementById('filterCity').value = '';
+  document.getElementById('filterYear').value = '';
+  document.getElementById('filterMonth').value = '';
+  document.getElementById('filterFormat').value = '';
+  applyFilters();
+}
+
+// ============ Tier Detail Toggle ============
+function toggleDetail() {
+  const el = document.getElementById('tierDetail');
+  el.classList.toggle('show');
+}
+
+// ============ Event Listeners ============
+let debounceTimer;
+document.getElementById('searchInput').addEventListener('input', () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(applyFilters, 300);
+});
+document.getElementById('filterTier').addEventListener('change', applyFilters);
+document.getElementById('filterSponsor').addEventListener('change', applyFilters);
+document.getElementById('filterCity').addEventListener('change', applyFilters);
+document.getElementById('filterYear').addEventListener('change', applyFilters);
+document.getElementById('filterMonth').addEventListener('change', applyFilters);
+document.getElementById('filterFormat').addEventListener('change', applyFilters);
+
+// ============ Start ============
+init();
+</script>
+</body>
+</html>
