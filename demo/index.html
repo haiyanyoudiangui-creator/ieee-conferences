@@ -1108,6 +1108,11 @@ function renderConferences(confs) {
     const year = formatYear(c.startDate);
 
     card.innerHTML = `
+      ${c.notificationDate ? `
+      <div style="background:linear-gradient(135deg,#ff6b6b,#d32f2f);color:#fff;padding:6px 12px;margin:-18px -20px 6px -20px;border-radius:10px 10px 0 0;font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:8px">
+        📬 录取通知：${new Date(c.notificationDate).toLocaleDateString('zh-CN',{month:'long',day:'numeric'})}
+        <span style="font-weight:400;font-size:.7rem;opacity:.85">${new Date(c.notificationDate) > new Date() ? '（待公布）' : '（已公布）'}</span>
+      </div>` : ''}
       <div class="conf-card-header">
         <div class="conf-title">${escapeHtml(c.eventTitle)}</div>
         <span class="tier-badge ${c.tier}">${TIER_LABELS[c.tier] || c.tier + '级'}</span>
@@ -1126,7 +1131,6 @@ function renderConferences(confs) {
         ${fields.slice(0, 2).map(f => `<span class="tag tag-field" title="${escapeHtml(f)}">${escapeHtml(f)}</span>`).join('')}
         ${fields.length > 2 ? `<span class="tag tag-field">+${fields.length - 2}</span>` : ''}
         ${c.tierReason ? `<span class="tag tag-tier-reason" title="评级依据">💡 ${escapeHtml(c.tierReason)}</span>` : ''}
-        ${c.notificationDate ? `<span class="tag tag-notify">📬 通知:${formatDate(c.notificationDate, c.notificationDate)}</span>` : ''}
       </div>
     `;
 
