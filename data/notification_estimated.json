@@ -1,0 +1,1982 @@
+[
+  {
+    "tier": "A",
+    "eventId": 71097,
+    "title": "2026 7th International Conference on Pattern Recog",
+    "startDate": "2026-07-10",
+    "callForPapers": "2026-01-25",
+    "estimatedNotification": "2026-03-26",
+    "conferenceUrl": "www.prml.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70847,
+    "title": "2026 9th International Conference on Signal Proces",
+    "startDate": "2026-07-10",
+    "callForPapers": "2026-02-10",
+    "estimatedNotification": "2026-04-11",
+    "conferenceUrl": "www.spml.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71154,
+    "title": "2026 Cross Strait Radio Science and Wireless Techn",
+    "startDate": "2026-07-10",
+    "callForPapers": "2026-05-15",
+    "estimatedNotification": "2026-07-14",
+    "conferenceUrl": "www.myconf.com.cn/CSRSWTC2026"
+  },
+  {
+    "tier": "A",
+    "eventId": 70813,
+    "title": "2026 IEEE/IAS Industrial and Commercial Power Syst",
+    "startDate": "2026-07-11",
+    "callForPapers": "2026-04-10",
+    "estimatedNotification": "2026-06-09",
+    "conferenceUrl": "ieee-icps.com/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70621,
+    "title": "2026 14th International Conference on Agro-Geoinfo",
+    "startDate": "2026-07-13",
+    "callForPapers": "2026-03-01",
+    "estimatedNotification": "2026-04-30",
+    "conferenceUrl": "agro-geoinformatics.org"
+  },
+  {
+    "tier": "S",
+    "eventId": 68950,
+    "title": "2026 IEEE 14th Sensor Array and Multichannel Signa",
+    "startDate": "2026-07-13",
+    "callForPapers": "2026-01-28",
+    "estimatedNotification": "2026-03-29",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "A",
+    "eventId": 69707,
+    "title": "2026 17th International Conference on Reliability,",
+    "startDate": "2026-07-14",
+    "callForPapers": "2026-03-15",
+    "estimatedNotification": "2026-05-14",
+    "conferenceUrl": "www.icrms.cn/#/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70707,
+    "title": "2026 Sustainable Photonics Conference (SPC)",
+    "startDate": "2026-07-15",
+    "callForPapers": "2026-03-15",
+    "estimatedNotification": "2026-05-14",
+    "conferenceUrl": "www.spconf.org/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70586,
+    "title": "2026 11th International Conference on Image, Visio",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-03-01",
+    "estimatedNotification": "2026-04-30",
+    "conferenceUrl": "www.icivc.org/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70907,
+    "title": "2026 5th International Conference on Power System ",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-02",
+    "estimatedNotification": "2026-07-01",
+    "conferenceUrl": "www.icpset.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71250,
+    "title": "2026 5th International Conference on Artificial In",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-02",
+    "estimatedNotification": "2026-07-01",
+    "conferenceUrl": "www.icaiotc.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71251,
+    "title": "2026 2nd International Conference on Electrical En",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-02",
+    "estimatedNotification": "2026-07-01",
+    "conferenceUrl": "www.eeais.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70099,
+    "title": "2026 11th International Conference on Signal and I",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-02-05",
+    "estimatedNotification": "2026-04-06",
+    "conferenceUrl": "https://www.icsip.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70535,
+    "title": "2026 8th International Conference on Electronics a",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-03",
+    "estimatedNotification": "2026-07-02",
+    "conferenceUrl": "www.ecnct.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70705,
+    "title": "2026 International Conference on Large Models and ",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-02",
+    "estimatedNotification": "2026-07-01",
+    "conferenceUrl": "www.iclmiat.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70614,
+    "title": "2026 International Conference on Advanced Electron",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-04-17",
+    "estimatedNotification": "2026-06-16",
+    "conferenceUrl": "icaemda.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71302,
+    "title": "2026 5th International Joint Conference on Informa",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-03-15",
+    "estimatedNotification": "2026-05-14",
+    "conferenceUrl": "www.jcice.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70129,
+    "title": "2026 IEEE 16th International Conference on Signal ",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-01",
+    "estimatedNotification": "2026-06-30",
+    "conferenceUrl": "www.icspcc.org"
+  },
+  {
+    "tier": "S",
+    "eventId": 70879,
+    "title": "2026 5th International Conference on Smart Grid an",
+    "startDate": "2026-07-17",
+    "callForPapers": "2026-05-02",
+    "estimatedNotification": "2026-07-01",
+    "conferenceUrl": "www.icsges.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70812,
+    "title": "2026 10th International Conference on Reliability ",
+    "startDate": "2026-07-19",
+    "callForPapers": "2026-03-01",
+    "estimatedNotification": "2026-04-30",
+    "conferenceUrl": "www.icre.org/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70692,
+    "title": "2026 24th International Conference on Optical Comm",
+    "startDate": "2026-07-20",
+    "callForPapers": "2026-05-10",
+    "estimatedNotification": "2026-07-09",
+    "conferenceUrl": "www.icocn.org.cn"
+  },
+  {
+    "tier": "A",
+    "eventId": 70110,
+    "title": "2026 2nd International Symposium on E-CARGO and Ap",
+    "startDate": "2026-07-20",
+    "callForPapers": "2026-11-15",
+    "estimatedNotification": "2027-01-14",
+    "conferenceUrl": "e-cargoschool.com"
+  },
+  {
+    "tier": "A",
+    "eventId": 71099,
+    "title": "2026 6th International Conference on Electrical En",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-05-10",
+    "estimatedNotification": "2026-07-09",
+    "conferenceUrl": "www.iceemt.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70680,
+    "title": "2026 17th International Conference on Information ",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-07-05",
+    "estimatedNotification": "2026-09-03",
+    "conferenceUrl": "ciop.com.cn/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70600,
+    "title": "2026 5th International Symposium on Semiconductor ",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-05-05",
+    "estimatedNotification": "2026-07-04",
+    "conferenceUrl": "www.is-set.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70970,
+    "title": "2026 3rd International Conference on Advanced Robo",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-04-30",
+    "estimatedNotification": "2026-06-29",
+    "conferenceUrl": "www.araeml.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70377,
+    "title": "2026 5th International Conference on Energy and El",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-05-09",
+    "estimatedNotification": "2026-07-08",
+    "conferenceUrl": "www.iceeps.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70982,
+    "title": "2026 5th International Symposium on Aerospace Engi",
+    "startDate": "2026-07-24",
+    "callForPapers": "2026-05-09",
+    "estimatedNotification": "2026-07-08",
+    "conferenceUrl": "www.isaes.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72479,
+    "title": "2026 22nd International Conference on Natural Comp",
+    "startDate": "2026-07-25",
+    "callForPapers": "2026-06-10",
+    "estimatedNotification": "2026-08-09",
+    "conferenceUrl": "icnc-fskd.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 69510,
+    "title": "2026 IEEE International Conference on Manipulation",
+    "startDate": "2026-07-27",
+    "callForPapers": "2026-05-01",
+    "estimatedNotification": "2026-06-30",
+    "conferenceUrl": "www.3m-nano.org"
+  },
+  {
+    "tier": "S",
+    "eventId": 68776,
+    "title": "2026 45th Chinese Control Conference (CCC)",
+    "startDate": "2026-07-27",
+    "callForPapers": "2025-12-15",
+    "estimatedNotification": "2026-02-13",
+    "conferenceUrl": "www.ccc2026.cn/en/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70227,
+    "title": "2026 International Conference on Manipulation, Aut",
+    "startDate": "2026-07-28",
+    "callForPapers": "2026-04-15",
+    "estimatedNotification": "2026-06-14",
+    "conferenceUrl": "marss-conference.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70875,
+    "title": "2026 8th International Conference on Power and Ene",
+    "startDate": "2026-07-28",
+    "callForPapers": "2026-03-10",
+    "estimatedNotification": "2026-05-09",
+    "conferenceUrl": "www.icpet.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70453,
+    "title": "2026 25th International Symposium on Communication",
+    "startDate": "2026-07-28",
+    "callForPapers": "2026-05-30",
+    "estimatedNotification": "2026-07-29",
+    "conferenceUrl": "https://iscit2026.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 69307,
+    "title": "2026 International Conference on Information Autom",
+    "startDate": "2026-07-29",
+    "callForPapers": "2026-04-20",
+    "estimatedNotification": "2026-06-19",
+    "conferenceUrl": "2026.icia-ieee.org"
+  },
+  {
+    "tier": "A",
+    "eventId": 70862,
+    "title": "2026 International Conference on Unmanned System a",
+    "startDate": "2026-07-31",
+    "callForPapers": "2026-05-15",
+    "estimatedNotification": "2026-07-14",
+    "conferenceUrl": "www.ic-usit.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71371,
+    "title": "2026 7th International Conference on Energy Power ",
+    "startDate": "2026-07-31",
+    "callForPapers": "2026-04-25",
+    "estimatedNotification": "2026-06-24",
+    "conferenceUrl": "www.icepae.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 70846,
+    "title": "2026 2nd International Conference on Laser, Optica",
+    "startDate": "2026-07-31",
+    "callForPapers": "2026-05-15",
+    "estimatedNotification": "2026-07-14",
+    "conferenceUrl": "www.iclota.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70245,
+    "title": "2026 5th International Symposium on Control Engine",
+    "startDate": "2026-07-31",
+    "callForPapers": "2026-03-27",
+    "estimatedNotification": "2026-05-26",
+    "conferenceUrl": "www.iscer.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 69663,
+    "title": "2026 IEEE International Conference on Mechatronics",
+    "startDate": "2026-08-02",
+    "callForPapers": "2026-04-10",
+    "estimatedNotification": "2026-06-09",
+    "conferenceUrl": "2026.ieee-icma.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70283,
+    "title": "2026 Conference on Lasers and Electro-Optics Pacif",
+    "startDate": "2026-08-02",
+    "callForPapers": "2026-03-28",
+    "estimatedNotification": "2026-05-27",
+    "conferenceUrl": "cleopr2026.org.cn/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71496,
+    "title": "2026 12th International Conference on Big Data and",
+    "startDate": "2026-08-03",
+    "callForPapers": "2026-06-10",
+    "estimatedNotification": "2026-08-09",
+    "conferenceUrl": "2026.bigdia.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70872,
+    "title": "2026 IEEE 14th Asia-Pacific Conference on Antennas",
+    "startDate": "2026-08-03",
+    "callForPapers": "2026-03-31",
+    "estimatedNotification": "2026-05-30",
+    "conferenceUrl": "www.apcap2026.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70780,
+    "title": "2026 9th International Conference on Intelligent R",
+    "startDate": "2026-08-03",
+    "callForPapers": "2026-03-15",
+    "estimatedNotification": "2026-05-14",
+    "conferenceUrl": "www.irce.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71373,
+    "title": "2026 27th International Conference on Electronic P",
+    "startDate": "2026-08-05",
+    "callForPapers": "2026-03-20",
+    "estimatedNotification": "2026-05-19",
+    "conferenceUrl": "www.icept.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 71614,
+    "title": "2026 IEEE International Conference on Cybernetics ",
+    "startDate": "2026-08-05",
+    "callForPapers": "2026-03-29",
+    "estimatedNotification": "2026-05-28",
+    "conferenceUrl": "www.cis-ram.org/2026/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70906,
+    "title": "2026 International Conference on Computer Science,",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-05-22",
+    "estimatedNotification": "2026-07-21",
+    "conferenceUrl": "www.ic-csmla.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71145,
+    "title": "2026 6th International Conference on Advanced Algo",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-05-22",
+    "estimatedNotification": "2026-07-21",
+    "conferenceUrl": "www.icaann.net"
+  },
+  {
+    "tier": "A",
+    "eventId": 71377,
+    "title": "2026 5th International Conference on Electronic El",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-05-24",
+    "estimatedNotification": "2026-07-23",
+    "conferenceUrl": "www.iceeac.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70794,
+    "title": "2026 IEEE/CIC International Conference on Communic",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-06-01",
+    "estimatedNotification": "2026-07-31",
+    "conferenceUrl": "iccc2026.ieee-iccc.org"
+  },
+  {
+    "tier": "A",
+    "eventId": 70977,
+    "title": "2026 8th International Conference on System Reliab",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-03-20",
+    "estimatedNotification": "2026-05-19",
+    "conferenceUrl": "www.srse.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70295,
+    "title": "2026 IEEE/CIC International Conference on Communic",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-03-23",
+    "estimatedNotification": "2026-05-22",
+    "conferenceUrl": "iccc2026.ieee-iccc.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 70899,
+    "title": "2026 2nd International Conference on Navigation, D",
+    "startDate": "2026-08-07",
+    "callForPapers": "2026-05-23",
+    "estimatedNotification": "2026-07-22",
+    "conferenceUrl": "www.icndc.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71223,
+    "title": "2026 IEEE 15th Non-Volatile Memory Systems and App",
+    "startDate": "2026-08-11",
+    "callForPapers": "2026-04-20",
+    "estimatedNotification": "2026-06-19",
+    "conferenceUrl": "nvmsa2026.github.io/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71153,
+    "title": "2026 IEEE 32nd International Conference on Embedde",
+    "startDate": "2026-08-11",
+    "callForPapers": "2026-03-06",
+    "estimatedNotification": "2026-05-05",
+    "conferenceUrl": "rtcsa2026.github.io/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70196,
+    "title": "2026 International Conference on Automation in Man",
+    "startDate": "2026-08-12",
+    "callForPapers": "2026-05-25",
+    "estimatedNotification": "2026-07-24",
+    "conferenceUrl": "www.icamal2026.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 69731,
+    "title": "2026 18th International Conference on Advanced Com",
+    "startDate": "2026-08-13",
+    "callForPapers": "2026-04-01",
+    "estimatedNotification": "2026-05-31",
+    "conferenceUrl": "conference.cs.cityu.edu.hk/icaci/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70170,
+    "title": "2026 International Zhejiang Power Electronics Conf",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-04-15",
+    "estimatedNotification": "2026-06-14",
+    "conferenceUrl": "www.zpec.org.cn/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70800,
+    "title": "2026 6th International Conference on Mechanical, E",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-05-29",
+    "estimatedNotification": "2026-07-28",
+    "conferenceUrl": "www.met-ms.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71539,
+    "title": "2026 3rd International Conference on Intelligent P",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-05-29",
+    "estimatedNotification": "2026-07-28",
+    "conferenceUrl": "www.icippr.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71524,
+    "title": "2026 2nd International Conference on Energy Techno",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-05-30",
+    "estimatedNotification": "2026-07-29",
+    "conferenceUrl": "www.ic-etee.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70335,
+    "title": "2026 IEEE 6th New Energy and Energy Storage System",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-06-20",
+    "estimatedNotification": "2026-08-19",
+    "conferenceUrl": "www.neesconf.com"
+  },
+  {
+    "tier": "B",
+    "eventId": 70722,
+    "title": "2026 3rd International Conference on Intelligent S",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-06-04",
+    "estimatedNotification": "2026-08-03",
+    "conferenceUrl": "www.icisr.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70962,
+    "title": "2026 IEEE 9th International Conference on Pattern ",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-03-25",
+    "estimatedNotification": "2026-05-24",
+    "conferenceUrl": "www.prai.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71536,
+    "title": "2026 2nd International Conference on Electronic In",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-05-30",
+    "estimatedNotification": "2026-07-29",
+    "conferenceUrl": "www.eicars.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71669,
+    "title": "2026 International Conference on Computer Science,",
+    "startDate": "2026-08-14",
+    "callForPapers": "2026-03-25",
+    "estimatedNotification": "2026-05-24",
+    "conferenceUrl": "www.iccste2026.com/"
+  },
+  {
+    "tier": "S",
+    "eventId": 69030,
+    "title": "2026 IEEE 22nd International Conference on Automat",
+    "startDate": "2026-08-17",
+    "callForPapers": "2026-03-15",
+    "estimatedNotification": "2026-05-14",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "A",
+    "eventId": 68533,
+    "title": "2026 IEEE Workshop on Power Electronics for Aerosp",
+    "startDate": "2026-08-19",
+    "callForPapers": "2026-01-15",
+    "estimatedNotification": "2026-03-16",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "A",
+    "eventId": 73023,
+    "title": "2026 8th International Conference on Industrial Ar",
+    "startDate": "2026-08-19",
+    "callForPapers": "2026-05-01",
+    "estimatedNotification": "2026-06-30",
+    "conferenceUrl": "iai.neu.edu.cn/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70365,
+    "title": "2026 20th International Conference on Complex Medi",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-05-21",
+    "estimatedNotification": "2026-07-20",
+    "conferenceUrl": "43.143.245.69/cme/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 70863,
+    "title": "2026 7th International Conference on Internet of T",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-06-06",
+    "estimatedNotification": "2026-08-05",
+    "conferenceUrl": "www.iotaiee.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71096,
+    "title": "2026 4th Asian Aerospace and Astronautics Conferen",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-03-20",
+    "estimatedNotification": "2026-05-19",
+    "conferenceUrl": "www.aaac.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71179,
+    "title": "2026 8th International Conference on Artificial In",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-06-06",
+    "estimatedNotification": "2026-08-05",
+    "conferenceUrl": "www.ic-aita.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71675,
+    "title": "2026 8th International Conference on Intelligent A",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-04-05",
+    "estimatedNotification": "2026-06-04",
+    "conferenceUrl": "www.icias.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71081,
+    "title": "2026 IEEE International Applied Computational Elec",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-03-31",
+    "estimatedNotification": "2026-05-30",
+    "conferenceUrl": "www.aces-china2026.org"
+  },
+  {
+    "tier": "A",
+    "eventId": 70864,
+    "title": "2026 IEEE International Conference on Smart Intern",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-04-20",
+    "estimatedNotification": "2026-06-19",
+    "conferenceUrl": "ieee-smartiot.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 71139,
+    "title": "2026 14th International Conference on Traffic and ",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-03-10",
+    "estimatedNotification": "2026-05-09",
+    "conferenceUrl": "www.ictle.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71176,
+    "title": "2026 6th International Conference on Computer Scie",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-06-06",
+    "estimatedNotification": "2026-08-05",
+    "conferenceUrl": "www.iccsb.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71672,
+    "title": "2026 4th International Conference on Power, Grid a",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-06-06",
+    "estimatedNotification": "2026-08-05",
+    "conferenceUrl": "www.ic-pges.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71042,
+    "title": "2026 19th International Conference on Advanced Com",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-03-20",
+    "estimatedNotification": "2026-05-19",
+    "conferenceUrl": "www.icacte.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70194,
+    "title": "2026 6th Power System and Green Energy Conference ",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-04-20",
+    "estimatedNotification": "2026-06-19",
+    "conferenceUrl": "www.psgec.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70783,
+    "title": "2026 International Conference on Embodied Intellig",
+    "startDate": "2026-08-21",
+    "callForPapers": "2026-06-06",
+    "estimatedNotification": "2026-08-05",
+    "conferenceUrl": "www.eircs.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70258,
+    "title": "2026 IEEE 6th International Conference on Applied ",
+    "startDate": "2026-08-22",
+    "callForPapers": "2026-07-25",
+    "estimatedNotification": "2026-09-23",
+    "conferenceUrl": "www.ammcs.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70922,
+    "title": "2026 18th International Conference on Intelligent ",
+    "startDate": "2026-08-22",
+    "callForPapers": "2026-04-28",
+    "estimatedNotification": "2026-06-27",
+    "conferenceUrl": "ihmsc.zju.edu.cn"
+  },
+  {
+    "tier": "B",
+    "eventId": 71590,
+    "title": "2026 7th International Conference on Biomedical En",
+    "startDate": "2026-08-22",
+    "callForPapers": "2026-03-06",
+    "estimatedNotification": "2026-05-05",
+    "conferenceUrl": "biolighticbebh.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71218,
+    "title": "2026 7th International Conference on Signal Proces",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-13",
+    "estimatedNotification": "2026-08-12",
+    "conferenceUrl": "www.icspcs.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70865,
+    "title": "2026 2nd International Conference on Applied Elect",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-02-05",
+    "estimatedNotification": "2026-04-06",
+    "conferenceUrl": "www.aeet.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71493,
+    "title": "2026 3rd International Conference on Digital Media",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-10",
+    "estimatedNotification": "2026-08-09",
+    "conferenceUrl": "www.icdmcis.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72268,
+    "title": "2026 International Conference of Data and Informat",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-10",
+    "estimatedNotification": "2026-08-09",
+    "conferenceUrl": "www.ic-dis.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71163,
+    "title": "2026 7th International Conference on Control, Robo",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-05-30",
+    "estimatedNotification": "2026-07-29",
+    "conferenceUrl": "www.ccris-conf.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71303,
+    "title": "2026 12th International Conference on Energy Mater",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-13",
+    "estimatedNotification": "2026-08-12",
+    "conferenceUrl": "www.icemee.cn/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71786,
+    "title": "2026 2nd International Conference on Advanced Semi",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-13",
+    "estimatedNotification": "2026-08-12",
+    "conferenceUrl": "www.asdit.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71220,
+    "title": "2026 International Conference on Computer Percepti",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-01",
+    "estimatedNotification": "2026-07-31",
+    "conferenceUrl": "www.icpnn.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71752,
+    "title": "2026 IEEE 5th International Conference on Electron",
+    "startDate": "2026-08-28",
+    "callForPapers": "2026-06-13",
+    "estimatedNotification": "2026-08-12",
+    "conferenceUrl": "www.ic-eit.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70703,
+    "title": "2026 IEEE 8th International Conference on Power, I",
+    "startDate": "2026-08-29",
+    "callForPapers": "2026-05-29",
+    "estimatedNotification": "2026-07-28",
+    "conferenceUrl": "www.icpics.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71085,
+    "title": "2026 2nd International Conference on Artificial In",
+    "startDate": "2026-09-04",
+    "callForPapers": "2026-06-05",
+    "estimatedNotification": "2026-08-04",
+    "conferenceUrl": "www.icaice.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71760,
+    "title": "2026 14th International Conference on Information ",
+    "startDate": "2026-09-04",
+    "callForPapers": "2026-04-15",
+    "estimatedNotification": "2026-06-14",
+    "conferenceUrl": "www.icicn.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71716,
+    "title": "2026 IEEE 5th International Conference on Image Pr",
+    "startDate": "2026-09-04",
+    "callForPapers": "2026-04-05",
+    "estimatedNotification": "2026-06-04",
+    "conferenceUrl": "www.icipmc.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71327,
+    "title": "2026 6th International Conference on Electronic In",
+    "startDate": "2026-09-04",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.eiect.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70827,
+    "title": "2026 IEEE 11th Optoelectronics Global Conference (",
+    "startDate": "2026-09-08",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ipsogc.org/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 71032,
+    "title": "2026 International Conference on Frontier of Smart",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-27",
+    "estimatedNotification": "2026-08-26",
+    "conferenceUrl": "www.ic-seps.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71484,
+    "title": "2026 International Conference on Embodied AI and R",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-27",
+    "estimatedNotification": "2026-08-26",
+    "conferenceUrl": "www.iceir.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71359,
+    "title": "2026 5th International Conference on Power System ",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-05-18",
+    "estimatedNotification": "2026-07-17",
+    "conferenceUrl": "www.icpspe.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71434,
+    "title": "2026 11th International Conference on Computer and",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-27",
+    "estimatedNotification": "2026-08-26",
+    "conferenceUrl": "www.iscipt.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71957,
+    "title": "2026 International Conference on Mechatronic Engin",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-28",
+    "estimatedNotification": "2026-08-27",
+    "conferenceUrl": "www.icmeai.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70322,
+    "title": "2026 International Conference on Artificial Intell",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-03-27",
+    "estimatedNotification": "2026-05-26",
+    "conferenceUrl": "www.ic-aci.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71950,
+    "title": "2026 7th International Conference on Modern Educat",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-26",
+    "estimatedNotification": "2026-08-25",
+    "conferenceUrl": "www.icmeim.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71142,
+    "title": "2026 International Conference on Electronic Engine",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-26",
+    "estimatedNotification": "2026-08-25",
+    "conferenceUrl": "www.eecct.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71840,
+    "title": "2026 10th International Symposium on Computer Scie",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-05-01",
+    "estimatedNotification": "2026-06-30",
+    "conferenceUrl": "www.iscsic.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71357,
+    "title": "2026 4th International Conference on Internet of T",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.iotcct.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71918,
+    "title": "2026 6th International Conference on Electrical En",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-27",
+    "estimatedNotification": "2026-08-26",
+    "conferenceUrl": "www.iceect.com/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71793,
+    "title": "2026 IEEE 10th Conference on Energy Internet and E",
+    "startDate": "2026-09-11",
+    "callForPapers": "2026-06-20",
+    "estimatedNotification": "2026-08-19",
+    "conferenceUrl": "attend.ieee.org/ei2-2026/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71805,
+    "title": "2026 China International Conference on Electricity",
+    "startDate": "2026-09-16",
+    "callForPapers": "2026-03-02",
+    "estimatedNotification": "2026-05-01",
+    "conferenceUrl": "ciced2026.csee.org.cn/index.html"
+  },
+  {
+    "tier": "B",
+    "eventId": 71432,
+    "title": "2026 International Conference on Multimodal Artifi",
+    "startDate": "2026-09-17",
+    "callForPapers": "2026-07-02",
+    "estimatedNotification": "2026-08-31",
+    "conferenceUrl": "www.ic-mai.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70940,
+    "title": "2026 11th International Conference on Power and Re",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-03-10",
+    "estimatedNotification": "2026-05-09",
+    "conferenceUrl": "www.icpre.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71425,
+    "title": "2026 7th International Conference on Intelligent C",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-02",
+    "estimatedNotification": "2026-08-31",
+    "conferenceUrl": "www.ichci.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71546,
+    "title": "2026 2nd International Conference on Image, Signal",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.ispml.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72219,
+    "title": "2026 1st International Conference on AI and Public",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-08-21",
+    "estimatedNotification": "2026-10-20",
+    "conferenceUrl": "www.icaips.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71467,
+    "title": "2026 6th International Conference on Artificial In",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.aiahpc.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71497,
+    "title": "2026 International Symposium on Digital Energy and",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "isdect.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71818,
+    "title": "2026 6th International Conference on Intelligent T",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-05-30",
+    "estimatedNotification": "2026-07-29",
+    "conferenceUrl": "www.icites.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 69754,
+    "title": "2026 IEEE 9th Information Technology and Mechatron",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-31",
+    "estimatedNotification": "2026-09-29",
+    "conferenceUrl": "www.itoec.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70678,
+    "title": "2026 9th International Conference on Computer Netw",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-10",
+    "estimatedNotification": "2026-09-08",
+    "conferenceUrl": "cs.xatu.edu.cn/iccnea26/homepage.html"
+  },
+  {
+    "tier": "B",
+    "eventId": 70679,
+    "title": "2026 International Conference on Computer Communic",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-18",
+    "estimatedNotification": "2026-09-16",
+    "conferenceUrl": "www.ccisc2026.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71428,
+    "title": "2026 IEEE 2nd International Conference on Smart Po",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-06-18",
+    "estimatedNotification": "2026-08-17",
+    "conferenceUrl": "spet.ieeepes.cn"
+  },
+  {
+    "tier": "B",
+    "eventId": 71765,
+    "title": "2026 8th International Conference on Circuits and ",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-05-20",
+    "estimatedNotification": "2026-07-19",
+    "conferenceUrl": "www.iccs.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72034,
+    "title": "2026 4th International Conference on Algorithm, Im",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.icaipmv.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72234,
+    "title": "2026 International Symposium on Visual Intelligenc",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-07",
+    "estimatedNotification": "2026-09-05",
+    "conferenceUrl": "www.isvias.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71235,
+    "title": "2026 IEEE 9th International Conference on Informat",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-03-25",
+    "estimatedNotification": "2026-05-24",
+    "conferenceUrl": "www.icsp.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70755,
+    "title": "2026 5th International Conference on Artificial In",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-03-18",
+    "estimatedNotification": "2026-05-17",
+    "conferenceUrl": "www.2026aicit.com"
+  },
+  {
+    "tier": "B",
+    "eventId": 71058,
+    "title": "2026 6th International Conference on Computer Grap",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.iccgiv.net"
+  },
+  {
+    "tier": "B",
+    "eventId": 71155,
+    "title": "2026 2nd International Conference on Electronic In",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.eieai.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72141,
+    "title": "2026 6th International Conference on Mechatronics ",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.icmtae.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71842,
+    "title": "2026 8th International Conference on Energy, Power",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-06-30",
+    "estimatedNotification": "2026-08-29",
+    "conferenceUrl": "www.icepsg.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71048,
+    "title": "2026 11th International Conference on Control, Rob",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-05-01",
+    "estimatedNotification": "2026-06-30",
+    "conferenceUrl": "www.iccrc.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71194,
+    "title": "2026 IEEE 7th International Conference on Advanced",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-04-30",
+    "estimatedNotification": "2026-06-29",
+    "conferenceUrl": "www.aees.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72045,
+    "title": "2026 11th International Seminar on Computer Techno",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.is-cme.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72217,
+    "title": "2026 2nd International Conference on Intelligent P",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-06-26",
+    "estimatedNotification": "2026-08-25",
+    "conferenceUrl": "www.icipat.com/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71520,
+    "title": "2026 6th International Conference on Energy, Power",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-07-03",
+    "estimatedNotification": "2026-09-01",
+    "conferenceUrl": "www.icepee.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70029,
+    "title": "2026 11th International Conference on Cyber Securi",
+    "startDate": "2026-09-18",
+    "callForPapers": "2026-05-31",
+    "estimatedNotification": "2026-07-30",
+    "conferenceUrl": "www.iccsie.com"
+  },
+  {
+    "tier": "B",
+    "eventId": 72078,
+    "title": "2026 23rd International Computer Conference on Wav",
+    "startDate": "2026-09-19",
+    "callForPapers": "2026-07-18",
+    "estimatedNotification": "2026-09-16",
+    "conferenceUrl": "waveletlab.cn/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71225,
+    "title": "2026 10th International Conference on Communicatio",
+    "startDate": "2026-09-19",
+    "callForPapers": "2026-04-05",
+    "estimatedNotification": "2026-06-04",
+    "conferenceUrl": "www.iccis.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71273,
+    "title": "2026 14th International Conference on Awareness Sc",
+    "startDate": "2026-09-23",
+    "callForPapers": "2026-05-15",
+    "estimatedNotification": "2026-07-14",
+    "conferenceUrl": "icast2026.org.cn/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 71485,
+    "title": "2026 International Conference on Electromagnetic E",
+    "startDate": "2026-09-26",
+    "callForPapers": "2026-03-20",
+    "estimatedNotification": "2026-05-19",
+    "conferenceUrl": "www.iceems.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71718,
+    "title": "2026 9th International Conference on Renewable Ene",
+    "startDate": "2026-09-26",
+    "callForPapers": "2026-04-05",
+    "estimatedNotification": "2026-06-04",
+    "conferenceUrl": "www.repe.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70125,
+    "title": "2026 IEEE 9th International Conference on Informat",
+    "startDate": "2026-09-27",
+    "callForPapers": "2026-06-28",
+    "estimatedNotification": "2026-08-27",
+    "conferenceUrl": "www.iciscae.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 71372,
+    "title": "2026 5th International Conference on Cloud Computi",
+    "startDate": "2026-09-28",
+    "callForPapers": "2026-07-13",
+    "estimatedNotification": "2026-09-11",
+    "conferenceUrl": "www.ccpcdl.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71427,
+    "title": "2026 International Conference on Big Data, Machine",
+    "startDate": "2026-09-28",
+    "callForPapers": "2026-07-13",
+    "estimatedNotification": "2026-09-11",
+    "conferenceUrl": "www.bdmlic.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 72024,
+    "title": "2026 IEEE 7th International Conference on Computin",
+    "startDate": "2026-09-28",
+    "callForPapers": "2026-04-20",
+    "estimatedNotification": "2026-06-19",
+    "conferenceUrl": "www.iccbd.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72172,
+    "title": "2026 2nd International Conference on Intelligent C",
+    "startDate": "2026-10-09",
+    "callForPapers": "2026-07-24",
+    "estimatedNotification": "2026-09-22",
+    "conferenceUrl": "www.ic-icee.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71810,
+    "title": "2026 IEEE Asia-Pacific Geoscience and Remote Sensi",
+    "startDate": "2026-10-11",
+    "callForPapers": "2026-05-31",
+    "estimatedNotification": "2026-07-30",
+    "conferenceUrl": "https://www.apgarss.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71412,
+    "title": "2026 IEEE International Flexible Electronics Techn",
+    "startDate": "2026-10-11",
+    "callForPapers": "2026-06-01",
+    "estimatedNotification": "2026-07-31",
+    "conferenceUrl": "attend.ieee.org/ifetc-2026/"
+  },
+  {
+    "tier": "A",
+    "eventId": 69600,
+    "title": "2026 Global Reliability and Prognostics and Health",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-06-26",
+    "estimatedNotification": "2026-08-25",
+    "conferenceUrl": "icphm.org"
+  },
+  {
+    "tier": "A",
+    "eventId": 70434,
+    "title": "2026 International Conference on Communications, C",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-07-10",
+    "estimatedNotification": "2026-09-08",
+    "conferenceUrl": "ccci.udg.edu/2026/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71421,
+    "title": "2026 International Conference of Granular-Ball Com",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.icgbc.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72143,
+    "title": "2026 5th International Symposium on Sensor Technol",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-07-25",
+    "estimatedNotification": "2026-09-23",
+    "conferenceUrl": "www.isstc.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 70532,
+    "title": "2026 CIE International Conference on Radar (Radar)",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-04-30",
+    "estimatedNotification": "2026-06-29",
+    "conferenceUrl": "www.radarconf.cn/2026"
+  },
+  {
+    "tier": "A",
+    "eventId": 72040,
+    "title": "2026 International Conference on Low-Altitude Tech",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.ic-latis.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72146,
+    "title": "2026 International Conference on Computer Vision a",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.ic-cvei.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72411,
+    "title": "2026 International Conference on Applied Statistic",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.icasma.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71094,
+    "title": "2026 2nd International Conference on Medical Robot",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-06-10",
+    "estimatedNotification": "2026-08-09",
+    "conferenceUrl": "cmrai.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70983,
+    "title": "2026 3rd International Conference on Frontiers of ",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-10",
+    "estimatedNotification": "2026-10-09",
+    "conferenceUrl": "www.icfeecs.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71333,
+    "title": "2026 10th International Conference on Automation, ",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-06-01",
+    "estimatedNotification": "2026-07-31",
+    "conferenceUrl": "www.icacr.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71722,
+    "title": "2026 International Conference on Intelligent Syste",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-07-17",
+    "estimatedNotification": "2026-09-15",
+    "conferenceUrl": "www.ic-iscoa.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71407,
+    "title": "2026 International Conference on Educational Techn",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-05-10",
+    "estimatedNotification": "2026-07-09",
+    "conferenceUrl": "www.icetm.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71317,
+    "title": "2026 IEEE 26th International Conference on Communi",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-05-25",
+    "estimatedNotification": "2026-07-24",
+    "conferenceUrl": "www.ieee-icct.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71708,
+    "title": "2026 IEEE 4th International Conference on Artifici",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-05-10",
+    "estimatedNotification": "2026-07-09",
+    "conferenceUrl": "www.icaii.org"
+  },
+  {
+    "tier": "B",
+    "eventId": 71905,
+    "title": "2026 International Conference on Algorithms, Data ",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-20",
+    "estimatedNotification": "2026-10-19",
+    "conferenceUrl": "www.admit2026.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72124,
+    "title": "2026 4th International Conference on Intelligent C",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-05",
+    "estimatedNotification": "2026-10-04",
+    "conferenceUrl": "www.ic-icn.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72458,
+    "title": "2026 3rd International Conference on Advanced Cont",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.acsat.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72565,
+    "title": "2026 IEEE 7th International Conference on Computer",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.icceic.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 70424,
+    "title": "2026 5th International Conference on Mechatronics ",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-07-15",
+    "estimatedNotification": "2026-09-13",
+    "conferenceUrl": "www.icmme.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 72095,
+    "title": "2026 6th International Symposium on Electrical, El",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-05-31",
+    "estimatedNotification": "2026-07-30",
+    "conferenceUrl": "www.iseeie.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 72445,
+    "title": "2026 6th International Conference on Power System ",
+    "startDate": "2026-10-16",
+    "callForPapers": "2026-08-01",
+    "estimatedNotification": "2026-09-30",
+    "conferenceUrl": "www.posei.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71811,
+    "title": "2026 5th Asian Conference on Frontiers of Power an",
+    "startDate": "2026-10-22",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "acfpe.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71146,
+    "title": "2026 15th International Symposium on Antennas, Pro",
+    "startDate": "2026-10-22",
+    "callForPapers": "2026-07-31",
+    "estimatedNotification": "2026-09-29",
+    "conferenceUrl": "www.rpsoc.cn/isape2026/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71384,
+    "title": "2026 18th International Conference on Signal Proce",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-05-15",
+    "estimatedNotification": "2026-07-14",
+    "conferenceUrl": "www.icsps.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71728,
+    "title": "2026 6th International Conference on Educational T",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-05-20",
+    "estimatedNotification": "2026-07-19",
+    "conferenceUrl": "www.icet.org/index.html"
+  },
+  {
+    "tier": "A",
+    "eventId": 71970,
+    "title": "2026 5th International Conference on Cloud Computi",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.ccbase.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72042,
+    "title": "2026 Photonics Global Conference (PGC)",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-09-06",
+    "estimatedNotification": "2026-11-05",
+    "conferenceUrl": "www.ieee-pgc.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71535,
+    "title": "2026 10th CAA International Conference on Vehicula",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-06-01",
+    "estimatedNotification": "2026-07-31",
+    "conferenceUrl": "www.ascl.jlu.edu.cn/vci/cvci2026/Home.htm"
+  },
+  {
+    "tier": "A",
+    "eventId": 72058,
+    "title": "2026 International Conference on Artificial Intell",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-20",
+    "estimatedNotification": "2026-10-19",
+    "conferenceUrl": "www.icairs.net/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72395,
+    "title": "2026 3rd International Conference on Unmanned Syst",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-07",
+    "estimatedNotification": "2026-10-06",
+    "conferenceUrl": "www.icusac.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72500,
+    "title": "2026 7th International Conference on Information S",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-09",
+    "estimatedNotification": "2026-10-08",
+    "conferenceUrl": "www.ispds.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72248,
+    "title": "2026 7th International Conference on Electronic Co",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.icecai.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72269,
+    "title": "2026 6th International Conference on Wireless Comm",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.iccniot.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72233,
+    "title": "2026 International Conference on Electronics, Comm",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-09",
+    "estimatedNotification": "2026-10-08",
+    "conferenceUrl": "www.icecis.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72523,
+    "title": "2026 8th International Conference on Intelligent C",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.icmsp.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71460,
+    "title": "2026 IEEE 18th International Conference on Signal ",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.icsp-ieee.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72259,
+    "title": "2026 6th International Conference on Artificial In",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-07-20",
+    "estimatedNotification": "2026-09-18",
+    "conferenceUrl": "www.icai2a.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71498,
+    "title": "2026 8th International Conference on Machine Learn",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.mlbdbi.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72363,
+    "title": "2026 8th International Symposium on Robotics and I",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-09",
+    "estimatedNotification": "2026-10-08",
+    "conferenceUrl": "www.isrimt.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72169,
+    "title": "2026 2nd International Conference on Electrical, C",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-08-08",
+    "estimatedNotification": "2026-10-07",
+    "conferenceUrl": "www.icoecai.com/"
+  },
+  {
+    "tier": "S",
+    "eventId": 72151,
+    "title": "2026 9th International Conference on Power and Ene",
+    "startDate": "2026-10-23",
+    "callForPapers": "2026-04-25",
+    "estimatedNotification": "2026-06-24",
+    "conferenceUrl": "www.icpea.org/"
+  },
+  {
+    "tier": "S",
+    "eventId": 72074,
+    "title": "2026 6th International Conference on Intelligent P",
+    "startDate": "2026-10-24",
+    "callForPapers": "2026-08-05",
+    "estimatedNotification": "2026-10-04",
+    "conferenceUrl": "www.icips.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 70200,
+    "title": "2026 12th International Conference of Electric Fus",
+    "startDate": "2026-10-25",
+    "callForPapers": "2026-02-28",
+    "estimatedNotification": "2026-04-29",
+    "conferenceUrl": "icefa2026.aconf.org"
+  },
+  {
+    "tier": "A",
+    "eventId": 72043,
+    "title": "2026 11th International Conference on Energy Syste",
+    "startDate": "2026-10-26",
+    "callForPapers": "2026-08-12",
+    "estimatedNotification": "2026-10-11",
+    "conferenceUrl": "www.ic-esep.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 68822,
+    "title": "2026 IEEE 18th International Conference on Solid-S",
+    "startDate": "2026-10-27",
+    "callForPapers": "2026-05-25",
+    "estimatedNotification": "2026-07-24",
+    "conferenceUrl": "www.icsict.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72260,
+    "title": "2026 4th International Conference on Artificial In",
+    "startDate": "2026-10-28",
+    "callForPapers": "2026-08-15",
+    "estimatedNotification": "2026-10-14",
+    "conferenceUrl": "www.icaiac.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72499,
+    "title": "2026 7th International Conference on Mechanical Au",
+    "startDate": "2026-10-29",
+    "callForPapers": "2026-08-15",
+    "estimatedNotification": "2026-10-14",
+    "conferenceUrl": "www.icmaim.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 69765,
+    "title": "2026 IEEE International Conference on Informatics,",
+    "startDate": "2026-10-29",
+    "callForPapers": "2026-07-31",
+    "estimatedNotification": "2026-09-29",
+    "conferenceUrl": "www.iciiee.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71831,
+    "title": "2026 International Conference on Cyber Resilience ",
+    "startDate": "2026-10-29",
+    "callForPapers": "2026-08-10",
+    "estimatedNotification": "2026-10-09",
+    "conferenceUrl": "www.ieeecress.com/"
+  },
+  {
+    "tier": "A",
+    "eventId": 72439,
+    "title": "2026 8th International Conference on Frontier Tech",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-08-15",
+    "estimatedNotification": "2026-10-14",
+    "conferenceUrl": "www.icftic.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71841,
+    "title": "2026 International Conference on Digital Intellige",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-08-15",
+    "estimatedNotification": "2026-10-14",
+    "conferenceUrl": "www.ic-dic.org/"
+  },
+  {
+    "tier": "A",
+    "eventId": 71871,
+    "title": "2026 IEEE International Conference on High Perform",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/index.php"
+  },
+  {
+    "tier": "A",
+    "eventId": 71872,
+    "title": "2026 IEEE International Conference on Data Science",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/dss/ (under construction)"
+  },
+  {
+    "tier": "A",
+    "eventId": 71874,
+    "title": "2026 IEEE International Conference on Smart City (",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/smartcity/ (under construction)"
+  },
+  {
+    "tier": "A",
+    "eventId": 71875,
+    "title": "2026 IEEE International Conference on Dependabilit",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/dependsys/ (under construction)"
+  },
+  {
+    "tier": "A",
+    "eventId": 71876,
+    "title": "2026 IEEE International Conference on Embodied AI ",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/embodiedai/ (under construction)"
+  },
+  {
+    "tier": "A",
+    "eventId": 71877,
+    "title": "2026 IEEE International Conference on Embedded Sof",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.ieee-hpcc.org/2026/icess/ (under construction)"
+  },
+  {
+    "tier": "A",
+    "eventId": 71533,
+    "title": "2026 Asian Conference on Artificial Intelligence T",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-16",
+    "estimatedNotification": "2026-08-15",
+    "conferenceUrl": "2026.acaitconf.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72041,
+    "title": "2026 International Conference on Artificial Intell",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-08-30",
+    "estimatedNotification": "2026-10-29",
+    "conferenceUrl": "www.aibdcc.net/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71823,
+    "title": "2026 2nd International Conference on Energy Intern",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-07-31",
+    "estimatedNotification": "2026-09-29",
+    "conferenceUrl": "www.ic-eiee.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 71337,
+    "title": "2026 9th International Conference on Robotic Syste",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-06-15",
+    "estimatedNotification": "2026-08-14",
+    "conferenceUrl": "www.icrsa.org/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72173,
+    "title": "2026 6th IEEE International Conference on Energy E",
+    "startDate": "2026-10-30",
+    "callForPapers": "2026-08-15",
+    "estimatedNotification": "2026-10-14",
+    "conferenceUrl": "www.iceeps.com/"
+  },
+  {
+    "tier": "B",
+    "eventId": 72231,
+    "title": "2026 International Conference on Power, Electrical",
+    "startDate": "2026-10-31",
+    "callForPapers": "2026-08-30",
+    "estimatedNotification": "2026-10-29",
+    "conferenceUrl": "www.peese.net/"
+  },
+  {
+    "tier": "S",
+    "eventId": 71350,
+    "title": "2027 IEEE International Conference on Multimedia &",
+    "startDate": "2027-07-13",
+    "callForPapers": "2026-12-08",
+    "estimatedNotification": "2027-02-06",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "B",
+    "eventId": 72918,
+    "title": "2027 IEEE 15th Region 10 Humanitarian Technology C",
+    "startDate": "2027-09-21",
+    "callForPapers": "2027-04-01",
+    "estimatedNotification": "2027-05-31",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "A",
+    "eventId": 71919,
+    "title": "IECON 2027 - 53rd Annual Conference of the IEEE In",
+    "startDate": "2027-10-14",
+    "callForPapers": "2026-06-30",
+    "estimatedNotification": "2026-08-29",
+    "conferenceUrl": ""
+  },
+  {
+    "tier": "S",
+    "eventId": 71997,
+    "title": "2028 IEEE 39th International Symposium on Personal",
+    "startDate": "2028-09-04",
+    "callForPapers": "2028-03-17",
+    "estimatedNotification": "2028-05-16",
+    "conferenceUrl": "pimrc2028.ieee-pimrc.org/"
+  }
+]

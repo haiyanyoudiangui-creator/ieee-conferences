@@ -1,0 +1,85 @@
+[
+  {
+    "eventId": 71097,
+    "eventTitle": "2026 7th International Conference on Pattern Recognition and Machine Learning (PRML)",
+    "tier": "A",
+    "startDate": "2026-07-10",
+    "url": "https://www.prml.org/",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.prml.org/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70813,
+    "eventTitle": "2026 IEEE/IAS Industrial and Commercial Power System Asia (I&CPS Asia)",
+    "tier": "A",
+    "startDate": "2026-07-11",
+    "url": "https://ieee-icps.com/index.html",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://ieee-icps.com/index.html\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70621,
+    "eventTitle": "2026 14th International Conference on Agro-Geoinformatics (Agro-Geoinformatics)",
+    "tier": "A",
+    "startDate": "2026-07-13",
+    "url": "https://agro-geoinformatics.org",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://agro-geoinformatics.org/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 69707,
+    "eventTitle": "2026 17th International Conference on Reliability, Maintainability and Safety (ICRMS)",
+    "tier": "A",
+    "startDate": "2026-07-14",
+    "url": "https://www.icrms.cn/#/",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.icrms.cn/#/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70707,
+    "eventTitle": "2026 Sustainable Photonics Conference (SPC)",
+    "tier": "A",
+    "startDate": "2026-07-15",
+    "url": "https://www.spconf.org/index.html",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.spconf.org/index.html\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70586,
+    "eventTitle": "2026 11th International Conference on Image, Vision and Computing (ICIVC)",
+    "tier": "A",
+    "startDate": "2026-07-17",
+    "url": "https://www.icivc.org/index.html",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.icivc.org/index.html\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70907,
+    "eventTitle": "2026 5th International Conference on Power System and Energy Technology (ICPSET)",
+    "tier": "A",
+    "startDate": "2026-07-17",
+    "url": "https://www.icpset.org/",
+    "callForPapers": "2026-05-02",
+    "notificationMatches": [],
+    "importantDates": [],
+    "textSnippet": "Home\nCommittee\nKeynote Speakers\nSubmission and Publication\nRegistration\nProgram\nContact\nVenue\nHistory\nWelcome to\nICPSET 2026\n2026 5th International Conference on\nPower System and Energy Technology\n\nConference Dates\nJuly 17-19, 2026\n\nVenue\nChengdu, China\n\nFinal Paper Submission Date\nJuly 3, 2026\n\nNotification Deadline\nJuly 10, 2026\n\nRegistration Deadline\nJuly 14, 2026\n\nAbout ICPSET 2026\n\n2026 5th International Conference on Power System and Energy Technology (ICPSET 2026) will be held from July 1"
+  },
+  {
+    "eventId": 71250,
+    "eventTitle": "2026 5th International Conference on Artificial Intelligence, Internet of Things and Cloud Computing Technology (AIoTC)",
+    "tier": "A",
+    "startDate": "2026-07-17",
+    "url": "https://www.icaiotc.net/",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.icaiotc.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 71251,
+    "eventTitle": "2026 2nd International Conference on Electrical Engineering, Automation and Information Science (EEAIS)",
+    "tier": "A",
+    "startDate": "2026-07-17",
+    "url": "https://www.eeais.org/",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.eeais.org/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70812,
+    "eventTitle": "2026 10th International Conference on Reliability Engineering (ICRE)",
+    "tier": "A",
+    "startDate": "2026-07-19",
+    "url": "https://www.icre.org/index.html",
+    "error": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.icre.org/index.html\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "eventId": 68950,
+    "title": "2026 IEEE 14th Sensor Array and Multichannel Signal Processing Workshop (SAM)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 70879,
+    "title": "2026 5th International Conference on Smart Grid and Energy Systems (SGES)",
+    "startDate": "",
+    "notificationDate": "2026-06-19",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 70377,
+    "title": "2026 5th International Conference on Energy and Electrical Power Systems (ICEEPS)",
+    "startDate": "",
+    "notificationDate": "2026-06-08",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 70982,
+    "title": "2026 5th International Symposium on Aerospace Engineering and Systems (ISAES)",
+    "startDate": "",
+    "notificationDate": "2026-07-16",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 68776,
+    "title": "2026 45th Chinese Control Conference (CCC)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.ccc2026.cn/en/\nCall log:\n\u001b[2m  - navigating to \"https://www.ccc2026.cn/en/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70875,
+    "title": "2026 8th International Conference on Power and Energy Technology (ICPET)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.icpet.org/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 70453,
+    "title": "2026 25th International Symposium on Communications and Information Technologies (ISCIT)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 70872,
+    "title": "2026 IEEE 14th Asia-Pacific Conference on Antennas and Propagation (APCAP)",
+    "startDate": "",
+    "notificationDate": "2026-05-14",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 70780,
+    "title": "2026 9th International Conference on Intelligent Robotics and Control Engineering (IRCE)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 71153,
+    "title": "2026 IEEE 32nd International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA)",
+    "startDate": "",
+    "notificationDate": "2026-07-02",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 69030,
+    "title": "2026 IEEE 22nd International Conference on Automation Science and Engineering (CASE)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 71327,
+    "title": "2026 6th International Conference on Electronic Information Engineering and Computer Technology (EIECT)",
+    "startDate": "",
+    "notificationDate": "2026-08-04",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 71918,
+    "title": "2026 6th International Conference on Electrical Engineering and Computer Technology (IC2ECT)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.iceect.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.iceect.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 71793,
+    "title": "2026 IEEE 10th Conference on Energy Internet and Energy System Integration (EI2)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 71520,
+    "title": "2026 6th International Conference on Energy, Power and Electrical Engineering (EPEE)",
+    "startDate": "",
+    "notificationDate": "2026-08-02",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 70029,
+    "title": "2026 11th International Conference on Cyber Security and Information Engineering (ICCSIE)",
+    "startDate": "",
+    "notificationDate": "2026-09-09",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 71225,
+    "title": "2026 10th International Conference on Communication and Information Systems (ICCIS)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 71718,
+    "title": "2026 9th International Conference on Renewable Energy and Power Engineering (REPE)",
+    "startDate": "",
+    "notificationDate": "2026-07-24",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 70424,
+    "title": "2026 5th International Conference on Mechatronics and Mechanical Engineering (ICMME)",
+    "startDate": "",
+    "notificationDate": "2026-09-29",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 72095,
+    "title": "2026 6th International Symposium on Electrical, Electronics and Information Engineering (ISEEIE)",
+    "startDate": "",
+    "notificationDate": "2026-08-14",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 72445,
+    "title": "2026 6th International Conference on Power System and Energy Internet (PoSEI)",
+    "startDate": "",
+    "notificationDate": "2026-08-31",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 71146,
+    "title": "2026 15th International Symposium on Antennas, Propagation and EM Theory (ISAPE)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.rpsoc.cn/isape2026/\nCall log:\n\u001b[2m  - navigating to \"https://www.rpsoc.cn/isape2026/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 72151,
+    "title": "2026 9th International Conference on Power and Energy Applications (ICPEA)",
+    "startDate": "",
+    "notificationDate": "2026-08-24",
+    "valid": "",
+    "status": "date_after_start"
+  },
+  {
+    "eventId": 72074,
+    "title": "2026 6th International Conference on Intelligent Power and Systems (ICIPS)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.icips.net/\nCall log:\n\u001b[2m  - navigating to \"https://www.icips.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "eventId": 71350,
+    "title": "2027 IEEE International Conference on Multimedia & Expo (ICME)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "not_found"
+  },
+  {
+    "eventId": 71997,
+    "title": "2028 IEEE 39th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)",
+    "startDate": "",
+    "notificationDate": null,
+    "valid": "",
+    "status": "page.goto: net::ERR_CONNECTION_CLOSED at https://pimrc2028.ieee-pimrc.org/\nCall log:\n\u001b[2m  - navigating to \"https://pimrc2028.ieee-pimrc.org/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]

@@ -344,6 +344,7 @@ body {
 }
 
 .tag-format { background: var(--tag-blue); color: #0066a1; }
+.tag-notify { background: #fff0f0; color: #d32f2f; font-weight: 600; }
 .tag-city { background: var(--tag-green); color: #2e7d32; }
 .tag-field { background: var(--tag-purple); color: #6b21a8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
 .tag-year { background: var(--tag-orange); color: #e65100; }
@@ -1125,6 +1126,7 @@ function renderConferences(confs) {
         ${fields.slice(0, 2).map(f => `<span class="tag tag-field" title="${escapeHtml(f)}">${escapeHtml(f)}</span>`).join('')}
         ${fields.length > 2 ? `<span class="tag tag-field">+${fields.length - 2}</span>` : ''}
         ${c.tierReason ? `<span class="tag tag-tier-reason" title="评级依据">💡 ${escapeHtml(c.tierReason)}</span>` : ''}
+        ${c.notificationDate ? `<span class="tag tag-notify">📬 通知:${formatDate(c.notificationDate, c.notificationDate)}</span>` : ''}
       </div>
     `;
 
@@ -1196,6 +1198,11 @@ function showDetail(c) {
         <p>${escapeHtml(c.scope)}</p>
       </div>` : ''}
 
+      ${c.notificationDate ? `
+      <div class="modal-section" style="background:#fff5f5;padding:12px 16px;border-radius:8px;border:1px solid #fcc;">
+        <h4 style="color:#d32f2f">📬 录取通知时间</h4>
+        <p style="font-weight:600;color:#d32f2f">${new Date(c.notificationDate).toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'})}</p>
+      </div>` : ''}
       <div class="modal-section">
         <h4>📝 征稿截止</h4>
         <p>${callForPapers}</p>
