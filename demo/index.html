@@ -821,7 +821,6 @@ function translateAddress(addr) {
     [/\bst\b/gi,''],[/\brd\b/gi,''],[/\bth\b/gi,''],[/\bnd\b/gi,''],
     [/\bthe\b/gi,''],[/\bwith\b/gi,''],[/\bpr\b/gi,''],[/\bny\b/gi,''],
     [/\bfrom\b/gi,''],[/\bvia\b/gi,''],[/\bits\b/gi,''],
-    [/[\s,]+/g,' '],
   ];
   for (const [re, cn] of T) s = s.replace(re, cn);
 
@@ -957,7 +956,15 @@ function translateAddress(addr) {
     return true;
   });
 
-  return clean.join('，');
+  // ---- 11. 中国地址习惯：从大到小排列 ----
+  // 英文: Venue, Street, District, City, Province, Country
+  // 中文: 省, 市, 区, 路号, 场馆
+  // 移除非必要的 "中国"（区政府够具体时省/国多余）
+  let result = clean;
+  if (result.length >= 2 && result[result.length - 1] === '中国') result.pop();
+  if (result.length >= 2 && result[0].length > result[result.length - 1].length) result.reverse();
+
+  return result.join('，');
 }
 
 function shortAddressCN(addr) {
