@@ -224,14 +224,21 @@ const FULL_PATH = path.join(__dirname, 'data', 'ieee_conferences_full.json');
 const JSON_PATH = path.join(__dirname, 'data', 'ieee_conferences.json');
 const DATA_PATH = fs.existsSync(FULL_PATH) ? FULL_PATH : JSON_PATH;
 
+// 加载通知日期
+const NOTIF_PATH = path.join(__dirname, 'data', 'notification_s.json');
+let notifMap = {};
+if (fs.existsSync(NOTIF_PATH)) {
+  try { notifMap = JSON.parse(fs.readFileSync(NOTIF_PATH, 'utf-8')); } catch(e) {}
+}
+
 function loadData() {
   const raw = fs.readFileSync(DATA_PATH, 'utf-8');
   const data = JSON.parse(raw);
-  // 给每条数据附加评级
   return (data.conferences || []).map(c => {
     const { tier, reason } = evaluateTier(c);
     const sponsors = classifySponsors(c.sponsors);
-    return { ...c, tier, tierReason: reason, sponsorsClassified: sponsors };
+    const nd = notifMap[c.eventId] || null;
+    return { ...c, tier, tierReason: reason, sponsorsClassified: sponsors, notificationDate: nd };
   });
 }
 
